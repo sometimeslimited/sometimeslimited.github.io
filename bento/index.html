@@ -205,6 +205,12 @@
       }
     }
 
+    @supports (-webkit-touch-callout: none) {
+      .row video {
+        pointer-events: none;
+      }
+    }
+
     /* SMALL SCREEN */
     @media (max-width: 768px) {
       header {
