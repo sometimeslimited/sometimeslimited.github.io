@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Sometimes ltd</title>
     <style>
         :root {
@@ -22,12 +25,18 @@
             color: rgb(58, 58, 58);
             display: flex;
             flex-direction: column;
-            font-family: sans-serif;
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: larger;
         }
 
         a {
             color: rgb(58, 58, 58);
             text-decoration: underline;
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+          
         }
 
         a:hover {
@@ -45,6 +54,10 @@
             flex: 1;
         }
 
+        h1 {
+            font-weight: 500;
+            text-decoration: underline;
+        }
         .games-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -168,13 +181,18 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
+
+        h2 {
+            margin-top: 1.5ch;
+            margin-bottom: 1ch;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Sometimes ltd.</h1>
-        <p>Sometimes we make games.</p>
+        <!-- <p>Sometimes we make games.</p> -->
     </header>
     <main>
         <!-- <h2>Games</h2> -->
