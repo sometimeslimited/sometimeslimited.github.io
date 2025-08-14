@@ -254,6 +254,38 @@
       .test-paragraph {
         top: 83%;
       }
+
+    }
+
+    button {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    input {
+      width: 250px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #400;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input:focus {
+      border-color: #007BFF;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     }
   </style>
 </head>
@@ -313,7 +345,8 @@
   <div class="center">
     <!-- First Feature -->
     <div class="row center padding-top">
-      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;" class="bordered">
+      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+        class="bordered">
         <source src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_1.mp4"
           type="video/mp4" />
       </video>
@@ -326,7 +359,8 @@
 
     <!-- Second Feature -->
     <div class="row center padding-top reverse">
-      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;" class="bordered">
+      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+        class="bordered">
         <source src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_3.mp4"
           type="video/mp4" />
       </video>
@@ -338,7 +372,8 @@
 
     <!-- Third Feature -->
     <div class="row center padding-top">
-      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;" class="bordered">
+      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+        class="bordered">
         <source src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_4.mp4"
           type="video/mp4" />
       </video>
@@ -350,7 +385,8 @@
 
     <!-- Fourth Feature -->
     <div class="row center padding-top reverse">
-      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;" class="bordered">
+      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+        class="bordered">
         <source src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_2.mp4"
           type="video/mp4" />
       </video>
@@ -360,10 +396,38 @@
         </p>
       </div>
     </div>
+
+    <div class="row center padding-top">
+
+      <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post"
+        class="embeddable-buttondown-form">
+
+        <p>Subscribe to our newsletter! :)</p>
+
+        <label>E-Mail: </label>
+        <input type="email" name="email" required autocomplete="email">
+        <input type="hidden" name="embed" value="1">
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="responsive-paragraph left-spacing">
+        <!-- <h2>Delightful Discoveries</h2>
+        <p>Discover a fresh take on puzzle games as you <b>slice and arrange ingredients</b> to craft bento boxes.</p> -->
+      </div>
+    </div>
+
+    <!-- <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post"
+      class="embeddable-buttondown-form">
+      <label>Email</label>
+      <input type="email" name="email" required autocomplete="email">
+
+      <input type="hidden" name="embed" value="1">
+      <button type="submit">Subscribe</button>
+    </form> -->
   </div>
 
   <footer>
     <ul class="footer-links">
+
       <li><a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank"
           rel="noopener noreferrer">Steam</a></li>
       <li><a href="https://www.instagram.com/sometimesltd/" target="_blank">Instagram</a></li>
