@@ -26,7 +26,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
     <title>Sometimes ltd</title>
-   
+
     <style>
         :root {
             --label-height: 6rem;
@@ -210,14 +210,23 @@
         h1 {
             margin-bottom: 0.5ch;
         }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            /* or 'contain' */
+        }
     </style>
 </head>
 
 <body>
     <header>
         <!-- <h1>Sometimes ltd.</h1> -->
-         <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Sometimes_Logo.png"
-        alt="Sometimes, ltd."/>
+        <div class="image-container">
+            <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Sometimes_Logo.png"
+                alt="Sometimes, ltd." height="100" />
+        </div>
         <!-- <p>Sometimes we make games.</p> -->
     </header>
     <main>
