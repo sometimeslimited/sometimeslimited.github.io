@@ -16,7 +16,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-  <title>Bento Blocks</title>
+  <title>SOMETIMES LIMITED is making Bento Blocks</title>
 
 
   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet" />
-
+  <link href="https://db.onlinewebfonts.com/c/a0d30f73b615c1af05ba2e7df0a93d24?family=CanvasText-Sans" rel="stylesheet">
   <style>
     body {
       font-family: "Pangolin", sans-serif;
@@ -39,7 +39,16 @@
       font-size: larger;
       margin: 0;
       padding: 0;
+      background-image: url(../images/bento_background.png);
+      background-repeat: repeat;
       background-color: #f1f1eb;
+    }
+
+    h1,
+    h2 {
+      font-family: "CanvasText-Sans", sans-serif;
+      text-transform: uppercase;
+      font-weight: 100;
     }
 
     ::selection {
@@ -176,7 +185,8 @@
       color: #f1f1eb;
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
+      margin-top: 0;
+      padding-top:  2rem;
     }
 
     .footer-links {
@@ -195,11 +205,10 @@
     }
 
     h2 {
-      font-weight: 600;
       font-style: normal;
-      color: #c97f5d;
-      margin-bottom: 0.5ch;
-      text-decoration: wavy underline;
+      color: #3d3b39;
+      margin-bottom: 1ch;
+      /* text-decoration: wavy underline; */
       text-decoration-color: #d3cbc4;
       text-decoration-thickness: 3px;
     }
@@ -315,161 +324,182 @@
     <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Logo_Small.png"
       style="width: 150px;" alt="Bento Blocks Logo" />
   </header>
-  <div class="video-header">
-    <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;">
-      <source src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Banner.mp4"
-        type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="test-paragraph center">
-      <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank" rel="noopener noreferrer"
-        class="header-text black-background-in-small-screen">Wishlist Now!</a>
-      <div class="horizontal black-background hide-in-small-screen">
-        <ul>
-          <li>
-            <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">
-              <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Steam.png"
-                alt="Steam" width="48" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/sometimesltd/" target="_blank">
-              <img
-                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Instagram.png"
-                alt="Instagram" width="48" />
-            </a>
-          </li>
-          <li>
-            <a href="https://x.com/SometimesLtd" target="_blank">
-              <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_X.png"
-                alt="X" width="48" />
-            </a>
-          </li>
-          <li>
-            <a href="mailto:sometimeslimited.games@gmail.com" target="_blank">
-              <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Email.png"
-                alt="Contact" width="48" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.tiktok.com/@sometimesltd" target="_blank">
-              <img
-                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_TikTok.png"
-                alt="Press-Kit" width="48" />
-            </a>
-          </li>
-          <li>
-            <a href="https://discord.gg/dNRHnA3s2J" target="_blank">
-              <img
-                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Discord.png"
-                alt="Press-Kit" width="48" />
-            </a>
-          </li>
-          <li>
-            <a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">
-              <img
-                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_BlueSky.png"
-                alt="Press-Kit" width="48" />
-            </a>
-          </li>
-          <li>
-            <a href="https://sometimes.ltd/bento/presskit.html" target="_blank">
-              <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Press.png"
-                alt="Press-Kit" width="48" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="center">
-    <!-- 646/190 -->
-    <iframe src="https://store.steampowered.com/widget/3311670/" frameborder="0" width="470" height="190"></iframe>
-    <!-- First Feature -->
-    <div class="row center padding-top">
-      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-        class="bordered">
-        <source src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_1.mp4"
+  <section>
+    <div class="video-header">
+      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;">
+        <source src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Banner.mp4"
           type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
-      <div class="responsive-paragraph left-spacing">
-        <h2>Culinary Puzzle Game</h2>
-        <p><b>Bento Blocks</b> is a puzzle game that combines culinary creativity with brain-teasing challenges.
-          Slice, arrange, and perfect your bento-making skills as you craft delicious lunch boxes at your own pace.</p>
+      <div class="test-paragraph center">
+        <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank" rel="noopener noreferrer"
+          class="header-text black-background-in-small-screen">Wishlist Now!</a>
+        <div class="horizontal black-background hide-in-small-screen">
+          <ul>
+            <li>
+              <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Steam.png"
+                  alt="Steam" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sometimesltd/" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Instagram.png"
+                  alt="Instagram" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/SometimesLtd" target="_blank">
+                <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_X.png"
+                  alt="X" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:sometimeslimited.games@gmail.com" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Email.png"
+                  alt="Contact" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@sometimesltd" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_TikTok.png"
+                  alt="Press-Kit" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://discord.gg/dNRHnA3s2J" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Discord.png"
+                  alt="Press-Kit" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_BlueSky.png"
+                  alt="Press-Kit" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://sometimes.ltd/bento/presskit.html" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Press.png"
+                  alt="Press-Kit" width="48" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <!-- Second Feature -->
-    <div class="row center padding-top reverse">
-      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-        class="bordered">
-        <source src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_3.mp4"
-          type="video/mp4" />
-      </video>
-      <div class="responsive-paragraph right-spacing">
-        <h2>Complete The Recipe Book!</h2>
-        <p>Solve each puzzle with the <b>fewest cuts</b> to complete your recipe book.</p>
+  </section>
+  <section>
+    <div class="center">
+      <!-- 646/190 -->
+      <div class="padding-top">
+        <iframe src="https://store.steampowered.com/widget/3311670/" frameborder="0" width="470" height="190"></iframe>
       </div>
+      <!-- First Feature -->
+      <div class="row center padding-top">
+        <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+          class="bordered">
+          <source
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_1.mp4"
+            type="video/mp4" />
+        </video>
+        <div class="responsive-paragraph left-spacing">
+          <h2>Bento Blocks</h2>
+          <p><b>Bento Blocks</b> is a puzzle game that combines culinary creativity with brain-teasing challenges.
+            Slice, arrange, and perfect your bento-making skills as you craft delicious lunch boxes at your own pace.
+          </p>
+        </div>
+      </div>
+
+      <!-- Second Feature -->
+      <div class="row center padding-top reverse">
+        <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+          class="bordered">
+          <source
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_3.mp4"
+            type="video/mp4" />
+        </video>
+        <div class="responsive-paragraph right-spacing">
+          <h2>Complete The Recipe Book!</h2>
+          <p>Solve each puzzle with the <b>fewest cuts</b> to complete your recipe book.</p>
+        </div>
+      </div>
+
+      <!-- Third Feature -->
+      <div class="row center padding-top">
+        <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+          class="bordered">
+          <source
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_4.mp4"
+            type="video/mp4" />
+        </video>
+        <div class="responsive-paragraph left-spacing">
+          <h2>Delightful Discoveries</h2>
+          <p>Discover a fresh take on puzzle games as you <b>slice and arrange ingredients</b> to craft bento boxes.</p>
+        </div>
+      </div>
+
+      <!-- Fourth Feature -->
+      <div class="row center padding-top reverse">
+        <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+          class="bordered">
+          <source
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_2.mp4"
+            type="video/mp4" />
+        </video>
+        <div class="responsive-paragraph right-spacing">
+          <h2>Hand-Crafted Levels</h2>
+          <p>Explore over100 lovingly <b>hand-crafted levels</b>, each with its own unique twist and satisfying
+            solution.
+          </p>
+        </div>
+      </div>
+  </section>
+  <section style="background-color: red;">
+    <div class="center padding-top">
+      <iframe src="https://discord.com/widget?id=1406824467891749025&theme=dark" width="350" height="300"
+        allowtransparency="true" frameborder="0"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
+  </section>
 
-    <!-- Third Feature -->
-    <div class="row center padding-top">
-      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-        class="bordered">
-        <source src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_4.mp4"
-          type="video/mp4" />
-      </video>
-      <div class="responsive-paragraph left-spacing">
-        <h2>Delightful Discoveries</h2>
-        <p>Discover a fresh take on puzzle games as you <b>slice and arrange ingredients</b> to craft bento boxes.</p>
-      </div>
-    </div>
+    <footer style="background-color: green;">
+      <ul class="footer-links">
+        <li><a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank"
+            rel="noopener noreferrer">Steam</a></li>
+        <li><a href="https://www.instagram.com/sometimesltd/" target="_blank">Instagram</a></li>
+        <li><a href="https://x.com/SometimesLtd" target="_blank">X</a></li>
+        <li><a href="https://www.tiktok.com/@sometimesltd" target="_blank">TikTok</a></li>
+        <li><a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">BlueSky</a></li>
+        <li><a href="https://discord.gg/dNRHnA3s2J" target="_blank">Discord</a></li>
+        <li><a href="mailto:sometimeslimited.games@gmail.com" target="_blank">Contact</a></li>
+        <li><a href="https://sometimes.ltd/bento/presskit.html" target="_blank">Press Kit</a></li>
 
-    <!-- Fourth Feature -->
-    <div class="row center padding-top reverse">
-      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-        class="bordered">
-        <source src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_2.mp4"
-          type="video/mp4" />
-      </video>
-      <div class="responsive-paragraph right-spacing">
-        <h2>Hand-Crafted Levels</h2>
-        <p>Explore over100 lovingly <b>hand-crafted levels</b>, each with its own unique twist and satisfying solution.
-        </p>
-      </div>
-    </div>
-  </div>
+      </ul>
 
-  <footer>
-    <ul class="footer-links">
-      <li><a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank"
-          rel="noopener noreferrer">Steam</a></li>
-      <li><a href="https://www.instagram.com/sometimesltd/" target="_blank">Instagram</a></li>
-      <li><a href="https://x.com/SometimesLtd" target="_blank">X</a></li>
-      <li><a href="https://www.tiktok.com/@sometimesltd" target="_blank">TikTok</a></li>
-      <li><a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">BlueSky</a></li>
-      <li><a href="https://discord.gg/dNRHnA3s2J" target="_blank">Discord</a></li>
-      <li><a href="mailto:sometimeslimited.games@gmail.com" target="_blank">Contact</a></li>
-      <li><a href="https://sometimes.ltd/bento/presskit.html" target="_blank">Press Kit</a></li>
+      </br></br></br>
+      <p class="accent">Subscribe to our newsletter! :)</p>
+      </br>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post" class="form">
+        <label>E-Mail: </label>
+        <div class="field-group">
+          <input type="email" name="email" required autocomplete="email">
+          <input type="hidden" name="embed" value="1">
+        </div>
+        <button type="submit">Subscribe</button>
+      </form>
+      </br></br>
+      <p><a href="https://sometimes.ltd/" target="_blank">© Sometimes Limited.</a></p>
 
-    </ul>
+    </footer>
 
-    </br></br></br>
-    <p class="accent">Subscribe to our newsletter! :)</p>
-    </br>
-    <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post" class="form">
-      <label>E-Mail: </label>
-      <div class="field-group">
-        <input type="email" name="email" required autocomplete="email">
-        <input type="hidden" name="embed" value="1">
-      </div>
-      <button type="submit">Subscribe</button>
-    </form>
-    </br></br>
-    <p><a href="https://sometimes.ltd/" target="_blank">© Sometimes Limited.</a></p>
-    
-  </footer>
 </body>
 
 </html>
