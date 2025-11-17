@@ -180,13 +180,17 @@
       padding-top: 3ch;
     }
 
+    .padding-bottom {
+      padding-bottom: 2ch;
+    }
+
     footer {
       background-color: black;
       color: #f1f1eb;
       text-align: center;
       padding: 1rem;
       margin-top: 0;
-      padding-top:  2rem;
+      padding-top: 2rem;
     }
 
     .footer-links {
@@ -216,6 +220,41 @@
     p {
       color: rgb(95, 90, 87);
     }
+
+    .divider {
+      transform: rotate(1.25deg) translateY(-20px);
+    }
+
+    .divider2 {
+      transform: rotate(-1deg) translateY(-50px);
+    }
+
+    .layout3 {
+      display: flex;
+      /* Makes the container a flex container */
+      justify-content: space-around;
+      /* Distributes space evenly around items */
+    }
+
+    .item {
+      flex: 1;
+      /* Allows items to grow and shrink to fill available space */
+      padding: 20px;
+      text-align: center;
+      margin: 5px;
+      /* Adds some spacing between items */
+    }
+
+    .solo_paragraph {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      font-size: larger;
+      color: #4d5344;
+      align-self: flex-start;
+      padding-top: 1.5ch;
+    }
+
 
     /* LARGE SCREEN */
     @media (min-width: 768px) {
@@ -447,7 +486,7 @@
       </div>
 
       <!-- Fourth Feature -->
-      <div class="row center padding-top reverse">
+      <div class="row center padding-top reverse padding-bottom">
         <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
           class="bordered">
           <source
@@ -461,16 +500,64 @@
           </p>
         </div>
       </div>
+
+      <!-- MEET THE TEAM -->
   </section>
-  <section style="background-color: red;">
-    <div class="center padding-top">
-      <iframe src="https://discord.com/widget?id=1406824467891749025&theme=dark" width="350" height="300"
-        allowtransparency="true" frameborder="0"
-        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  <section
+    style="background-color: #ca9d5d; background-image: url(../images/corkboard.png); background-repeat: repeat;">
+    <div class="center">
+      <img src="../images/tape.png" alt="Transition tape" class="divider" width="300" height="56" loading="lazy"
+        decoding="async">
+    </div>
+    <div class="center responsive-paragraph padding-bottom">
+      <h2>Meet the team!</h2>
+      <p>
+        SOMETIMES LIMITED is an independent game development studio based in New Zealand. 
+      </p>
+    </div>
+    <div class="layout3 center solo_paragraph padding-bottom">
+      <div class="center item padding-bottom ">
+        <img src="../images/Jet.png" style="width: 100px;"/>
+        <p>Jet Jones</p>
+      </div>
+      <div class="center item padding-bottom">
+        <img src="../images/Sofia.png" style="width: 100px;"/>
+        <p>Sofia Kotelevskaya</p>
+      </div>
+      <div class="center item padding-bottom">
+        <img src="../images/Andy.png" style="width: 100px;"/>
+        <p>Andy Burusphat</p>
+      </div>
     </div>
   </section>
 
-    <footer style="background-color: green;">
+
+  <footer
+    style="background-color: #3a4231; background-image: url(../images/green_background.png); background-repeat: repeat;">
+
+    <section>
+      <div class="center">
+        <img src="../images/tape.png" alt="Transition tape" class="divider2" width="300" height="56" loading="lazy"
+          decoding="async">
+      </div>
+      <h2 class="accent">Join our Discord community...</h2>
+
+      <div class="">
+        <iframe src="https://discord.com/widget?id=1406824467891749025&theme=dark" width="350" height="300"
+          allowtransparency="true" frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      </div>
+      <h2 class="accent">...and subscribe to our newsletter!</h2>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post" class="form">
+        <div class="field-group">
+          <label>E-Mail: </label>
+          <input type="email" name="email" required autocomplete="email">
+          <input type="hidden" name="embed" value="1">
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
+      </br></br>
+
       <ul class="footer-links">
         <li><a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank"
             rel="noopener noreferrer">Steam</a></li>
@@ -481,24 +568,10 @@
         <li><a href="https://discord.gg/dNRHnA3s2J" target="_blank">Discord</a></li>
         <li><a href="mailto:sometimeslimited.games@gmail.com" target="_blank">Contact</a></li>
         <li><a href="https://sometimes.ltd/bento/presskit.html" target="_blank">Press Kit</a></li>
-
       </ul>
-
-      </br></br></br>
-      <p class="accent">Subscribe to our newsletter! :)</p>
-      </br>
-      <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post" class="form">
-        <label>E-Mail: </label>
-        <div class="field-group">
-          <input type="email" name="email" required autocomplete="email">
-          <input type="hidden" name="embed" value="1">
-        </div>
-        <button type="submit">Subscribe</button>
-      </form>
-      </br></br>
       <p><a href="https://sometimes.ltd/" target="_blank">© Sometimes Limited.</a></p>
-
-    </footer>
+    </section>
+  </footer>
 
 </body>
 
