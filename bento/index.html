@@ -185,6 +185,13 @@
       padding-bottom: 2ch;
     }
 
+    .padding-bottom-medium {
+      padding-bottom: 3ch;
+    }
+    .padding-bottom-large {
+      padding-bottom: 4ch;
+    }
+
     footer {
       background-color: black;
       color: #f1f1eb;
@@ -330,7 +337,7 @@
 
     .meet-the-team {
       background-image: url(../images/Notepad_3.png);
-      background-position: center 0;
+      background-position: center 6px;
       /* or right center */
       background-size: 800px auto;
       padding-bottom: 4ch;
@@ -438,6 +445,14 @@
           rgba(0, 0, 0, 0.1) 0px,
           rgba(0, 0, 0, 0) 20px);
     }
+
+    .tilt-1 {
+      transform: rotate(-1deg);
+    }
+
+    .tilt-2 {
+      transform: rotate(1deg);
+    }
   </style>
 </head>
 
@@ -445,11 +460,6 @@
   <header>
     <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Logo_Small.png"
       style="width: 150px;" alt="Bento Blocks Logo" />
-    <div class="header-icons">
-      <svg viewBox="23 23 64 64">
-        <use xlink:href="#tiktok-unauth-icon" width="110" height="110"></use>
-      </svg>
-    </div>
   </header>
   <section>
     <div class="video-header" style="background-color: rgba(255, 255, 255, 0);">
@@ -524,7 +534,7 @@
     </div>
   </section>
   <section>
-    <div class="center gradient-top">
+    <div class="center gradient-top padding-bottom-large">
       <!-- 646/190 -->
       <div class="padding-top">
         <iframe src="https://store.steampowered.com/widget/3311670/" frameborder="0" width="470" height="190"></iframe>
@@ -539,7 +549,7 @@
       <!-- First Feature -->
       <div class="row center padding-top">
         <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-          class="bordered">
+          class="bordered tilt-1">
           <source
             src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_1.mp4"
             type="video/mp4" />
@@ -555,7 +565,7 @@
       <!-- Second Feature -->
       <div class="row center padding-top reverse">
         <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-          class="bordered">
+          class="bordered tilt-2">
           <source
             src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_3.mp4"
             type="video/mp4" />
@@ -569,7 +579,7 @@
       <!-- Third Feature -->
       <div class="row center padding-top">
         <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-          class="bordered">
+          class="bordered tilt-1">
           <source
             src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_4.mp4"
             type="video/mp4" />
@@ -583,20 +593,20 @@
       <!-- Fourth Feature -->
       <div class="row center padding-top reverse padding-bottom">
         <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-          class="bordered">
+          class="bordered tilt-2 ">
           <source
             src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Loop_2.mp4"
             type="video/mp4" />
         </video>
-        <div class="responsive-paragraph right-spacing">
+        <div class="responsive-paragraph right-spacing ">
           <h2>Hand-Crafted Levels</h2>
           <p>Explore <b>over 100 lovingly hand-crafted levels</b>, each with its own unique twist and satisfying
             solution.
           </p>
         </div>
       </div>
-
-      <!-- MEET THE TEAM -->
+    </div>
+    <!-- MEET THE TEAM -->
   </section>
   <section
     style="background-color: #ca9d5d; background-image: url(../images/corkboard.png); background-repeat: repeat; ">
@@ -608,7 +618,7 @@
 
 
       <div class="center responsive-paragraph padding-bottom">
-        <h2>Meet the team!</h2>
+        <h2>SOMETIMES LIMITED</h2>
         <p>
           SOMETIMES LIMITED is an independent game development studio based in New Zealand.
         </p>
@@ -642,13 +652,13 @@
         </div>
         <h2 class="accent">Join our Discord community...</h2>
 
-        <div class="">
+        <div class="padding-bottom-medium">
           <iframe src="https://discord.com/widget?id=1406824467891749025&theme=dark" width="350" height="300"
             allowtransparency="true" frameborder="0"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>
         <h2 class="accent">...and subscribe to our newsletter!</h2>
-        <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post" class="form">
+        <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post" class="form padding-bottom">
           <div class="field-group">
             <input placeholder="Enter your email" type="email" class="email-input" name="email" required
               autocomplete="email">
@@ -669,7 +679,7 @@
           <li><a href="mailto:sometimeslimited.games@gmail.com" target="_blank">Contact</a></li>
           <li><a href="https://sometimes.ltd/bento/presskit.html" target="_blank">Press Kit</a></li>
         </ul>
-        <p><a href="https://sometimes.ltd/" target="_blank">© Sometimes Limited.</a></p>
+        <p><a href="https://sometimes.ltd/" target="_blank">© SOMETIMES LIMITED.</a></p>
 
 
       </div>
