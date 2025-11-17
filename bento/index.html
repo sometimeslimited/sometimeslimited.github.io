@@ -433,6 +433,7 @@
     }
 
     .gradient-top {
+      transform: translateY(-7px);
       background: linear-gradient(to bottom,
           rgba(0, 0, 0, 0.1) 0px,
           rgba(0, 0, 0, 0) 20px);
@@ -444,6 +445,11 @@
   <header>
     <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Logo_Small.png"
       style="width: 150px;" alt="Bento Blocks Logo" />
+    <div class="header-icons">
+      <svg viewBox="23 23 64 64">
+        <use xlink:href="#tiktok-unauth-icon" width="110" height="110"></use>
+      </svg>
+    </div>
   </header>
   <section>
     <div class="video-header" style="background-color: rgba(255, 255, 255, 0);">
@@ -644,8 +650,8 @@
         <h2 class="accent">...and subscribe to our newsletter!</h2>
         <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post" class="form">
           <div class="field-group">
-            <label>E-Mail: </label>
-            <input type="email" class="email-input" name="email" required autocomplete="email">
+            <input placeholder="Enter your email" type="email" class="email-input" name="email" required
+              autocomplete="email">
             <input type="hidden" name="embed" value="1">
             <button class="button-30" type="submit">Subscribe</button>
           </div>
