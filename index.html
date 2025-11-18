@@ -2,328 +2,749 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVG4QTQ4H0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVG4QTQ4H0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        gtag('config', 'G-EVG4QTQ4H0');
-    </script>
+    gtag('config', 'G-EVG4QTQ4H0');
+  </script>
 
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="favicon/site.webmanifest" />
-    <title>Sometimes ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <title>SOMETIMES LIMITED is making Bento Blocks</title>
 
-    <style>
-        :root {
-            --label-height: 6rem;
-        }
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
 
-        body {
-            background-color: rgb(240, 240, 240);
-            color: rgb(58, 58, 58);
-            display: flex;
-            flex-direction: column;
-            font-family: "Inter", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: larger;
-        }
 
-        a {
-            color: rgb(58, 58, 58);
-            text-decoration: underline;
-            font-family: "Inter", sans-serif;
-            font-weight: 400;
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet" />
+  <link href="https://db.onlinewebfonts.com/c/a0d30f73b615c1af05ba2e7df0a93d24?family=CanvasText-Sans" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Pangolin", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: larger;
+      margin: 0;
+      padding: 0;
+      background-image: url(https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/bento_background.png);
+      background-repeat: repeat;
+      background-color: #f1f1eb;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    h1,
+    h2 {
+      font-family: "CanvasText-Sans", sans-serif;
+      text-transform: uppercase;
+      font-weight: 100;
+    }
 
-        header,
-        h1,
-        h2,
-        p {
-            text-align: center;
-        }
+    ::selection {
+      color: rgb(245, 230, 225);
+      background: rgb(95, 179, 99);
+    }
 
-        main {
-            flex: 1;
-        }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #f1f1eb;
+      text-align: left;
+      padding: 1rem;
+      z-index: 1000;
+    }
 
-        h1 {
-            font-weight: 500;
-            text-decoration: underline;
-        }
+    a {
+      color: #f1f1eb;
+      position: relative;
+      text-decoration: underline;
+    }
 
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1px;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            background: rgb(240, 240, 240);
-        }
+    p a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      /* height: 4px; */
+      height: 1.6ch;
+      border-radius: 4px;
+      background-color: #8ac59646;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .2s ease-in-out;
+    }
 
-        .games-grid li {
-            position: relative;
-            background-color: #f0f0f0;
-            border-radius: 0;
-            aspect-ratio: 1 / 1;
-            overflow: hidden;
-        }
+    a:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
 
-        .games-grid li a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            font-size: 1.25em;
-        }
 
-        .games-grid li a video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-            transition: transform 0.5s ease, filter 0.2s ease;
-        }
+    .accent {
+      color: #f1f1eb;
+    }
 
-        .games-grid li a:hover video {
-            transform: scale(1.05);
-            filter: saturate(1) brightness(1) opacity(1);
-        }
+    p b {
+      color: rgb(187, 88, 70);
+    }
 
-        .games-grid li a::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 20%;
-            background-blend-mode: multiply;
-            z-index: 1;
-            pointer-events: none;
-        }
+    .video-header {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      position: relative;
 
-        .games-grid li a .label {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: var(--label-height);
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.61) 10%, transparent 100%);
-            color: #fff;
-            font-weight: bold;
-            padding: 0 1rem;
-            font-size: 1.5em;
-            line-height: var(--label-height);
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    }
 
-        .games-grid li a .label .right-align {
-            margin-right: 2rem;
-            opacity: 0.75;
-        }
+    .video-header video {
+      width: 100%;
+      height: auto;
+    }
 
-        .video {
-            pointer-events: none;
-        }
+    .black-background {
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: 15px;
+      box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.50);
+    }
 
-        video::-webkit-media-controls,
-        video::-webkit-media-controls-start-playback-button {
-            display: none !important;
-            -webkit-appearance: none;
-        }
+    .test-paragraph {
+      position: absolute;
+      top: 88%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: #f1f1eb;
+      padding: 0.5rem;
+    }
 
-        .team-list {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+    .horizontal ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
 
-        footer {
-            background-color: black;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-            color: white;
-        }
+    .center {
+      margin: 0 auto;
+      text-align: center;
+    }
 
-        footer a {
-            color: white;
-        }
+    .center ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
 
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 1rem 0;
-        }
+    .row {
+      max-width: 1200px;
+      padding-left: 24px;
+      padding-right: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .footer-links li {
-            display: inline-block;
-            margin: 0 10px;
-        }
+    .row img,
+    .row video {
+      flex: 0 0 40%;
+      max-width: 40%;
+      height: auto;
+    }
 
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
+    .row .responsive-paragraph {
+      flex: 0 0 60%;
+      max-width: 60%;
+      text-align: center;
+    }
 
-        h2 {
-            margin-top: 1.5ch;
-            margin-bottom: 1ch;
-        }
+    .responsive-paragraph {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      font-size: larger;
+      align-self: flex-start;
+      padding-top: 1.5ch;
+    }
 
-        h1 {
-            margin-bottom: 0.5ch;
-        }
+    .row video {
+      width: 100%;
+      height: auto;
+    }
 
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
+    .header-text {
+      font-weight: 800;
+      font-size: x-large;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
 
-        input {
-            width: 250px;
-            padding: 10px;
-            margin: 10px 0;
-            border: 2px solid #f1f1eb;
-            border-radius: 5px;
-            background-color: #f1f1eb;
-            font-size: 16px;
-        }
+    .bordered {
+      /* border: 3px dashed rgb(185, 179, 178); */
+      /* padding: 10px; */
+      box-sizing: border-box;
+      height: auto;
+      overflow: hidden;
+      position: relative;
 
-        input:focus {
-            border-color: #007BFF;
-            outline: none;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-        }
+      border: 12px solid rgb(248, 247, 233);
+      box-shadow: 1px 4px 6px rgba(117, 117, 117, 0.281);
+      /* box-shadow: inset 0 0 0 5px rgb(255, 255, 255); */
+      /* box-shadow: inset 5px 5px 10px 2px rgba(0, 0, 0, 0.5); */
+    }
 
-        button {
-            background-color: #e6e6e6;
-            /* Green */
-            border: none;
-            color: rgb(0, 0, 0);
-            padding: 12px 24px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            font-weight: 700;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-    </style>
+    .padding-top {
+      padding-top: 3ch;
+    }
+
+    .padding-bottom {
+      padding-bottom: 2ch;
+    }
+
+    .padding-bottom-medium {
+      padding-bottom: 3ch;
+    }
+
+    .padding-bottom-large {
+      padding-bottom: 4ch;
+    }
+
+    footer {
+      color: #d1e2c5;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+    }
+
+    .footer-links li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-style: normal;
+      color: #695039d2;
+      margin-bottom: 1ch;
+      /* text-decoration: wavy underline; */
+      text-decoration-color: #d3cbc4;
+      text-decoration-thickness: 3px;
+    }
+
+    p {
+      color: rgba(110, 91, 80, 0.842);
+    }
+
+    .divider {
+      transform: rotate(1.25deg) translateY(-20px);
+    }
+
+    .divider2 {
+      transform: rotate(-1deg) translateY(-23px);
+    }
+
+    .layout3 {
+      display: flex;
+      /* Makes the container a flex container */
+      justify-content: space-around;
+      /* Distributes space evenly around items */
+    }
+
+    .item {
+      flex: 1;
+      /* Allows items to grow and shrink to fill available space */
+      padding: 20px;
+      text-align: center;
+      margin: 5px;
+
+      /* Adds some spacing between items */
+    }
+
+    .item img {
+      opacity: 0.7;
+    }
+
+    .solo_paragraph {
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto;
+      font-size: larger;
+      color: #4d5344;
+      align-self: flex-start;
+      padding-top: 1.5ch;
+    }
+
+
+    .fish {
+      background-image: url(https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Fish.png);
+    }
+
+    /* LARGE SCREEN */
+    @media (min-width: 768px) {
+      .left-spacing {
+        padding-left: 2.5ch;
+      }
+
+      .right-spacing {
+        padding-right: 2.5ch;
+      }
+
+      .row.reverse {
+        flex-direction: row-reverse;
+      }
+    }
+
+    @supports (-webkit-touch-callout: none) {
+      .row video {
+        pointer-events: none;
+      }
+    }
+
+    /* SMALL SCREEN */
+    @media (max-width: 768px) {
+      header {
+        position: absolute;
+      }
+
+      .row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .row img,
+      .row video,
+      .row .responsive-paragraph {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .row video {
+        margin-bottom: 1rem;
+        pointer-events: none;
+      }
+
+      .hide-in-small-screen {
+        display: none;
+        visibility: hidden;
+      }
+
+      .black-background-in-small-screen {
+        font-size: 20px;
+        font-weight: 200;
+        background: rgba(0, 0, 0, 0.45);
+        border-radius: 8px;
+        box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.50);
+        text-decoration-thickness: 2px;
+      }
+
+      .test-paragraph {
+        top: 83%;
+      }
+
+    }
+
+    .meet-the-team {
+      background-image: url(https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Notepad_3.png);
+      background-position: center 6px;
+      /* or right center */
+      background-size: 800px auto;
+      padding-bottom: 4ch;
+
+    }
+
+    .meet-the-team p {
+      color: rgb(90, 71, 46);
+    }
+
+    .meet-the-team a {
+      color: rgb(92, 110, 25);
+      position: relative;
+      text-decoration: underline;
+    }
+
+
+    .meet-the-team a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      /* height: 4px; */
+      height: 1.6ch;
+      border-radius: 4px;
+      background-color: #fffd7f46;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .2s ease-in-out;
+    }
+
+    .meet-the-team a:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+
+    button {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+
+    .email-input {
+      border-radius: 4px;
+      /* border-width: 0; */
+      /* box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #69d36d 0 -3px 0 inset; */
+      /* box-sizing: border-box; */
+      height: 47px;
+      line-height: 1;
+      font-size: 1.7ch;
+    }
+
+    /* CSS */
+    .button-30 {
+      align-items: center;
+      appearance: none;
+      background-color: #4CAF50;
+      border-radius: 4px;
+      border-width: 0;
+      box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #66af54 0 -3px 0 inset;
+      box-sizing: border-box;
+      color: #36395A;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: "Pangolin", "CanvasText-Sans", serif;
+      height: 48px;
+      justify-content: center;
+      line-height: 1;
+      list-style: none;
+      overflow: hidden;
+      padding-left: 16px;
+      padding-right: 16px;
+      position: relative;
+      text-align: left;
+      text-decoration: none;
+      transition: box-shadow .15s, transform .15s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      white-space: nowrap;
+      will-change: box-shadow, transform;
+      font-size: 1.7ch;
+      color: rgb(5, 26, 5);
+      /* text-shadow: #007BFF; */
+
+    }
+
+    .button-30:focus {
+      box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #69d36d 0 -3px 0 inset;
+    }
+
+    .button-30:hover {
+      box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #69d36d 0 -3px 0 inset;
+      transform: translateY(-2px);
+    }
+
+    .button-30:active {
+      box-shadow: #769487 0 3px 7px inset;
+      transform: translateY(2px);
+    }
+
+    input {
+      width: 250px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #f1f1eb;
+      border-radius: 5px;
+      background-color: #f1f1eb;
+      font-size: 16px;
+    }
+
+    input:focus {
+      border-color: #007BFF;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .field-group {
+      display: block;
+    }
+
+    .gradient-top {
+      transform: translateY(-7px);
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.1) 0px,
+          rgba(0, 0, 0, 0) 20px);
+    }
+
+    .tilt-1 {
+      transform: rotate(-1deg);
+    }
+
+    .tilt-2 {
+      transform: rotate(1deg);
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <!-- <h1>Sometimes ltd.</h1> -->
-        <div class="image-container">
-            <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Sometimes_Logo.png"
-                alt="Sometimes, ltd." height="100" />
+  <header>
+    <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Logo_Small.png"
+      style="width: 150px;" alt="Bento Blocks Logo" />
+  </header>
+  <section>
+    <div class="video-header" style="background-color: rgba(255, 255, 255, 0);">
+      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;">
+        <source
+          src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Header_Cropped.mp4"
+          type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="test-paragraph center">
+        <!-- <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank" rel="noopener noreferrer"
+          class="header-text black-background-in-small-screen">Wishlist Now!</a> -->
+        <div class="horizontal black-background hide-in-small-screen">
+          <ul>
+            <li>
+              <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Steam.png"
+                  alt="Steam" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sometimesltd/" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Instagram.png"
+                  alt="Instagram" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/SometimesLtd" target="_blank">
+                <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_X.png"
+                  alt="X" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:sometimeslimited.games@gmail.com" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Email.png"
+                  alt="Contact" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@sometimesltd" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_TikTok.png"
+                  alt="Press-Kit" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://discord.gg/dNRHnA3s2J" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Discord.png"
+                  alt="Press-Kit" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_BlueSky.png"
+                  alt="Press-Kit" width="48" />
+              </a>
+            </li>
+            <li>
+              <a href="https://sometimes.ltd/bento/presskit.html" target="_blank">
+                <img
+                  src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Press.png"
+                  alt="Press-Kit" width="48" />
+              </a>
+            </li>
+          </ul>
         </div>
-        <!-- <p>Sometimes we make games.</p> -->
-    </header>
-    <main>
-        <!-- <h2>Games</h2> -->
-        <ul class="games-grid">
-            <li>
-                <a href="bento/index.html">
-                    <video
-                        src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Banner.mp4"
-                        autoplay loop muted playsinline webkit-playsinline disablePictureInPicture></video>
-                    <span class="label">
-                        <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Logo_Small.png"
-                            height="100" alt="Bento Logo" />
-                        <img class="right-align"
-                            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Steam_Icon_White.png"
-                            height="50" alt="Steam Icon" />
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="label">Coming Soon...</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="label">Coming Soon...</span>
-                </a>
-            </li>
-        </ul>
-        <h2>Team</h2>
-        <ul class="team-list">
-            <li><a href="https://jet-jones.github.io">Jet J.</a></li>
-            <li><a href="https://damnstandard.com">Andy B.</a></li>
-            <li><a href="#">Sofia K.</a></li>
-        </ul>
-    </main>
-    <footer>
-        <ul class="footer-links">
-            <li><a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank"
-                    rel="noopener noreferrer">Steam</a></li>
-            <li><a href="https://www.instagram.com/sometimesltd/" target="_blank">Instagram</a></li>
-            <li><a href="https://x.com/SometimesLtd" target="_blank">X</a></li>
-            <li><a href="https://www.tiktok.com/@sometimesltd" target="_blank">TikTok</a></li>
-            <li><a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">BlueSky</a></li>
-            <li><a href="https://discord.gg/dNRHnA3s2J" target="_blank">Discord</a></li>
-            <li><a href="mailto:sometimeslimited.games@gmail.com" target="_blank">Contact</a></li>
-            <li><a href="https://sometimes.ltd/bento/presskit.html" target="_blank">Press Kit</a></li>
-        </ul>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="center gradient-top padding-bottom-large">
+      <!-- 646/190 -->
+      <div class="padding-top">
+        <iframe src="https://store.steampowered.com/widget/3311670/" frameborder="0" width="470" height="190"></iframe>
+      </div>
+      <!-- Fish -->
+      <div class="fish">
+      </div>
 
-        </br></br></br>
-        <p class="accent">Subscribe to our newsletter! :)</p>
-        </br>
-        <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post" class="form">
-            <label>E-Mail: </label>
-            <div class="field-group">
-                <input type="email" name="email" required autocomplete="email">
-                <input type="hidden" name="embed" value="1">
-            </div>
-            <button type="submit">Subscribe</button>
+      <div class="">
+      </div>
+
+      <!-- First Feature -->
+      <div class="row center padding-top">
+        <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+          class="bordered tilt-1">
+          <source
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Gameplay_4.mp4"
+            type="video/mp4" />
+        </video>
+        <div class="responsive-paragraph left-spacing">
+          <h2>Bento Blocks</h2>
+          <p><b>Bento Blocks</b> is a puzzle game that combines culinary creativity with brain-teasing challenges.
+            Slice, arrange, and perfect your bento-making skills as you craft delicious lunch boxes at your own pace.
+          </p>
+        </div>
+      </div>
+
+      <!-- Second Feature -->
+      <div class="row center padding-top reverse">
+        <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+          class="bordered tilt-2">
+          <source
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Gameplay_1.mp4"
+            type="video/mp4" />
+        </video>
+        <div class="responsive-paragraph right-spacing">
+          <h2>Complete The Recipe Book!</h2>
+          <p>Solve each puzzle with the <b>fewest cuts</b> to complete your recipe book.</p>
+        </div>
+      </div>
+
+      <!-- Third Feature -->
+      <div class="row center padding-top">
+        <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+          class="bordered tilt-1">
+          <source
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Gameplay_3.mp4"
+            type="video/mp4" />
+        </video>
+        <div class="responsive-paragraph left-spacing">
+          <h2>Delightful Discoveries</h2>
+          <p>Discover a fresh take on puzzle games as you <b>slice and arrange ingredients</b> to craft bento boxes.</p>
+        </div>
+      </div>
+
+      <!-- Fourth Feature -->
+      <div class="row center padding-top reverse padding-bottom">
+        <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+          class="bordered tilt-2 ">
+          <source
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Gameplay_2.mp4"
+            type="video/mp4" />
+        </video>
+        <div class="responsive-paragraph right-spacing ">
+          <h2>Hand-Crafted Levels</h2>
+          <p>Explore <b>over 100 lovingly hand-crafted levels</b>, each with its own unique twist and satisfying
+            solution.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- MEET THE TEAM -->
+  </section>
+  <section
+    style="background-color: #ca9d5d; background-image: url(https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/corkboard.png); background-repeat: repeat; ">
+    <div class="center gradient-top">
+      <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/tape.png" alt="Transition tape" class="divider" width="300" height="56">
+    </div>
+    <div class="meet-the-team">
+
+
+      <div class="center responsive-paragraph padding-bottom">
+        <h2>SOMETIMES LIMITED</h2>
+        <p>
+          SOMETIMES LIMITED is an independent game development studio based in New Zealand.
+        </p>
+      </div>
+      <div class="layout3 center solo_paragraph padding-bottom">
+        <div class="center item padding-bottom ">
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Jet.png" style="width: 100px;" />
+          <p><a href="https://www.linkedin.com/in/jet-jones-50b182179/">Jet Jones</a></p>
+        </div>
+        <div class="center item padding-bottom">
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Sofia.png" style="width: 100px;" />
+          <p><a href="https://nz.linkedin.com/in/sofia-kotelevskaya-80804b1a2">Sofia Kotelevskaya</a></p>
+        </div>
+        <div class="center item padding-bottom">
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Andy.png" style="width: 100px;" />
+          <p><a href="https://damnstandard.com/">Andy Burusphat</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+
+    <footer
+      style="background-color: #3a4231; background-image: url(https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/green_background.png); background-repeat: repeat;">
+      <div class="center gradient-top padding-bottom">
+
+        <div class="center">
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/tape.png" alt="Transition tape" class="divider2" width="300" height="56">
+        </div>
+        <h2 class="accent">Join our Discord community...</h2>
+
+        <div class="padding-bottom-medium">
+          <iframe src="https://discord.com/widget?id=1406824467891749025&theme=dark" width="350" height="300"
+            allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+        <h2 class="accent">...and subscribe to our newsletter!</h2>
+        <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post"
+          class="form padding-bottom">
+          <div class="field-group">
+            <input placeholder="Enter your email" type="email" class="email-input" name="email" required
+              autocomplete="email">
+            <input type="hidden" name="embed" value="1">
+            <button class="button-30" type="submit">Subscribe</button>
+          </div>
         </form>
         </br></br>
-        <p><a href="https://sometimes.ltd/" target="_blank">© Sometimes Limited.</a></p>
 
+        <ul class="footer-links">
+          <li><p><a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank"
+              rel="noopener noreferrer">Steam</a></p></li>
+          <li><p><a href="https://www.instagram.com/sometimesltd/" target="_blank">Instagram</a></p></li>
+          <li><p><a href="https://x.com/SometimesLtd" target="_blank">X</a></p></li>
+          <li><p><a href="https://www.tiktok.com/@sometimesltd" target="_blank">TikTok</a></p></li>
+          <li><p><a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">BlueSky</a></p></li>
+          <li><p><a href="https://discord.gg/dNRHnA3s2J" target="_blank">Discord</a></p></li>
+          <li><p><a href="mailto:sometimeslimited.games@gmail.com" target="_blank">Contact</a></p></li>
+          <li><p><a href="https://sometimes.ltd/bento/presskit.html" target="_blank">Press Kit</a></p></li>
+        </ul>
+        <p><a href="https://sometimes.ltd/" target="_blank">© SOMETIMES LIMITED.</a></p>
+
+
+      </div>
     </footer>
+  </section>
+
 </body>
 
 </html>
