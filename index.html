@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SOMETIMES LIMITED is making Bento Blocks</title>
+
+  <title>Bento Blocks - Cozy Puzzle Game About Crafting Lunch Boxes | SOMETIMES LIMITED</title>
   <meta name="description"
-    content="SOMETIMES LIMITED is making Bento Blocks, A cozy puzzle game where you craft lunch boxes." />
-  <link rel=“canonical” href=“https://sometimes.ltd/” />
+    content="Bento Blocks is a cozy puzzle game where you slice and arrange ingredients to craft lunch boxes. Developed by SOMETIMES LIMITED in New Zealand. Play the demo on Steam." />
+  <link rel="canonical" href="https://sometimes.ltd/bento/" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVG4QTQ4H0"></script>
@@ -16,6 +17,63 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-EVG4QTQ4H0');
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bento Blocks – Cozy Puzzle Game About Crafting Lunch Boxes" />
+  <meta property="og:description"
+    content="Slice, arrange, and perfect your bento-making skills in this cozy puzzle game by SOMETIMES LIMITED. Play the demo on Steam." />
+  <meta property="og:url" content="https://sometimes.ltd/bento/" />
+  <meta property="og:site_name" content="Bento Blocks" />
+  <meta property="og:image"
+    content="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/bento_background.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bento Blocks – Cozy Puzzle Game About Crafting Lunch Boxes" />
+  <meta name="twitter:description"
+    content="Slice, arrange, and perfect your bento-making skills in this cozy puzzle game by SOMETIMES LIMITED. Play the demo on Steam." />
+  <meta name="twitter:image"
+    content="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/bento_background.png" />
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "VideoGame",
+        "name": "Bento Blocks",
+        "url": "https://sometimes.ltd/bento/",
+        "image": "https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/bento_background.png",
+        "description": "Bento Blocks is a cozy single-player puzzle game where you slice and arrange ingredients to craft lunch boxes with the fewest cuts.",
+        "genre": ["Puzzle", "Cozy"],
+        "playMode": "SinglePlayer",
+        "applicationCategory": "Game",
+        "operatingSystem": "Windows",
+        "author": { "@id": "#sometimes-limited" },
+        "publisher": { "@id": "#sometimes-limited" },
+        "sameAs": [
+          "https://store.steampowered.com/app/3311670/Bento_Blocks/"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "#sometimes-limited",
+        "name": "SOMETIMES LIMITED",
+        "url": "https://sometimes.ltd/",
+        "logo": "https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Logo_Small.png",
+        "sameAs": [
+          "https://store.steampowered.com/app/3311670/Bento_Blocks/",
+          "https://www.instagram.com/sometimesltd/",
+          "https://x.com/SometimesLtd",
+          "https://www.tiktok.com/@sometimesltd",
+          "https://bsky.app/profile/sometimesltd.bsky.social",
+          "https://discord.gg/dNRHnA3s2J"
+        ]
+      ]
+  }
   </script>
 
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
@@ -27,7 +85,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet" />
-  <link href="https://db.onlinewebfonts.com/c/a0d30f73b615c1af05ba2e7df0a93d24?family=CanvasText-Sans" rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/a0d30f73b615c1af05ba2e7df0a93d24?family=CanvasText-Sans"
+    rel="stylesheet" />
 
   <style>
     body {
@@ -47,6 +106,13 @@
       font-family: "CanvasText-Sans", sans-serif;
       text-transform: uppercase;
       font-weight: 100;
+      font-style: normal;
+      color: #695039d2;
+      margin-bottom: 1ch;
+      text-decoration-color: #69503975;
+      text-decoration-thickness: 2px;
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
     }
 
     ::selection {
@@ -75,7 +141,6 @@
       content: '';
       position: absolute;
       width: 100%;
-      /* height: 4px; */
       height: 1.6ch;
       border-radius: 4px;
       background-color: #8ac59646;
@@ -91,7 +156,6 @@
       transform: scaleX(1);
     }
 
-
     .accent {
       color: #f1f1eb;
     }
@@ -105,7 +169,6 @@
       height: auto;
       overflow: hidden;
       position: relative;
-
     }
 
     .video-header video {
@@ -158,6 +221,7 @@
       flex: 0 0 40%;
       max-width: 40%;
       height: auto;
+      width: 100%;
     }
 
     .row .responsive-paragraph {
@@ -175,30 +239,13 @@
       padding-top: 1.5ch;
     }
 
-    .row video {
-      width: 100%;
-      height: auto;
-    }
-
-    .header-text {
-      font-weight: 800;
-      font-size: x-large;
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-    }
-
     .bordered {
-      /* border: 3px dashed rgb(185, 179, 178); */
-      /* padding: 10px; */
       box-sizing: border-box;
       height: auto;
       overflow: hidden;
       position: relative;
-
       border: 12px solid rgb(248, 247, 233);
       box-shadow: 1px 4px 6px rgba(117, 117, 117, 0.281);
-      /* box-shadow: inset 0 0 0 5px rgb(255, 255, 255); */
-      /* box-shadow: inset 5px 5px 10px 2px rgba(0, 0, 0, 0.5); */
     }
 
     .padding-top {
@@ -238,17 +285,6 @@
       text-decoration: underline;
     }
 
-    h2,
-    h1 {
-      font-style: normal;
-      color: #695039d2;
-      margin-bottom: 1ch;
-      text-decoration-color: #69503975;
-      text-decoration-thickness: 2px;
-      text-decoration-line: underline;
-      text-decoration-style: wavy;
-    }
-
     p {
       color: rgba(110, 91, 80, 0.842);
     }
@@ -263,26 +299,18 @@
 
     .layout3 {
       display: flex;
-      /* Makes the container a flex container */
       justify-content: space-around;
-      /* Distributes space evenly around items */
     }
 
     .item {
       flex: 1;
-      /* Allows items to grow and shrink to fill available space */
       padding: 20px;
       text-align: center;
       margin: 5px;
-
-      /* Adds some spacing between items */
     }
 
     .item img {
       max-width: 90px;
-    }
-
-    .item img {
       opacity: 0.7;
     }
 
@@ -296,12 +324,10 @@
       padding-top: 1.5ch;
     }
 
-
     .fish {
       background-image: url(https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Fish.png);
     }
 
-    /* LARGE SCREEN */
     @media (min-width: 768px) {
       .left-spacing {
         padding-left: 2.5ch;
@@ -322,7 +348,6 @@
       }
     }
 
-    /* SMALL SCREEN */
     @media (max-width: 768px) {
       header {
         position: absolute;
@@ -362,16 +387,13 @@
       .test-paragraph {
         top: 83%;
       }
-
     }
 
     .meet-the-team {
       background-image: url(https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Notepad_3.png);
       background-position: center 6px;
-      /* or right center */
       background-size: 800px auto;
       padding-bottom: 4ch;
-
     }
 
     .meet-the-team p {
@@ -384,12 +406,10 @@
       text-decoration: underline;
     }
 
-
     .meet-the-team a::before {
       content: '';
       position: absolute;
       width: 100%;
-      /* height: 4px; */
       height: 1.6ch;
       border-radius: 4px;
       background-color: #fffd7f46;
@@ -405,42 +425,23 @@
       transform: scaleX(1);
     }
 
-
-    button {
-      background-color: #4CAF50;
-      /* Green */
-      border: none;
-      color: white;
-      padding: 12px 24px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-
     .email-input {
       border-radius: 4px;
-      /* border-width: 0; */
-      /* box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #69d36d 0 -3px 0 inset; */
-      /* box-sizing: border-box; */
       height: 47px;
       line-height: 1;
       font-size: 1.7ch;
     }
 
-    /* CSS */
     .button-30 {
       align-items: center;
       appearance: none;
       background-color: #4CAF50;
       border-radius: 4px;
       border-width: 0;
-      box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #66af54 0 -3px 0 inset;
+      box-shadow:
+        rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        #66af54 0 -3px 0 inset;
       box-sizing: border-box;
       color: #36395A;
       cursor: pointer;
@@ -464,16 +465,21 @@
       will-change: box-shadow, transform;
       font-size: 1.7ch;
       color: rgb(5, 26, 5);
-      /* text-shadow: #007BFF; */
-
     }
 
     .button-30:focus {
-      box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #69d36d 0 -3px 0 inset;
+      box-shadow:
+        #D6D6E7 0 0 0 1.5px inset,
+        rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        #69d36d 0 -3px 0 inset;
     }
 
     .button-30:hover {
-      box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #69d36d 0 -3px 0 inset;
+      box-shadow:
+        rgba(45, 35, 66, 0.4) 0 4px 8px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        #69d36d 0 -3px 0 inset;
       transform: translateY(-2px);
     }
 
@@ -522,74 +528,82 @@
 <body>
   <header>
     <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Logo_Small.png"
-      style="width: 150px;" alt="Bento Blocks Logo" />
+      style="width: 150px;" alt="Bento Blocks logo" loading="lazy" />
   </header>
+
   <section>
     <div class="video-header" style="background-color: rgba(255, 255, 255, 0);">
-      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;">
+      <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
+        aria-label="Bento Blocks gameplay trailer">
         <source
           src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Header_Cropped.mp4"
           type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="test-paragraph center">
-        <!-- <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank" rel="noopener noreferrer"
-          class="header-text black-background-in-small-screen">Wishlist Now!</a> -->
-        <div class="horizontal black-background hide-in-small-screen">
+        <div class="horizontal black-background hide-in-small-screen" aria-label="Social links and store links">
           <ul>
             <li>
-              <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">
+              <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank"
+                rel="noopener noreferrer" aria-label="Bento Blocks on Steam">
                 <img
                   src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Steam.png"
-                  alt="Steam" width="48" />
+                  alt="Steam icon" width="48" height="48" loading="lazy" />
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/sometimesltd/" target="_blank">
+              <a href="https://www.instagram.com/sometimesltd/" target="_blank" rel="noopener noreferrer"
+                aria-label="Sometimes Limited on Instagram">
                 <img
                   src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Instagram.png"
-                  alt="Instagram" width="48" />
+                  alt="Instagram icon" width="48" height="48" loading="lazy" />
               </a>
             </li>
             <li>
-              <a href="https://x.com/SometimesLtd" target="_blank">
+              <a href="https://x.com/SometimesLtd" target="_blank" rel="noopener noreferrer"
+                aria-label="Sometimes Limited on X">
                 <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_X.png"
-                  alt="X" width="48" />
+                  alt="X icon" width="48" height="48" loading="lazy" />
               </a>
             </li>
             <li>
-              <a href="mailto:sometimeslimited.games@gmail.com" target="_blank">
+              <a href="mailto:sometimeslimited.games@gmail.com" target="_blank" rel="noopener noreferrer"
+                aria-label="Email Sometimes Limited">
                 <img
                   src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Email.png"
-                  alt="Contact" width="48" />
+                  alt="Email icon" width="48" height="48" loading="lazy" />
               </a>
             </li>
             <li>
-              <a href="https://www.tiktok.com/@sometimesltd" target="_blank">
+              <a href="https://www.tiktok.com/@sometimesltd" target="_blank" rel="noopener noreferrer"
+                aria-label="Sometimes Limited on TikTok">
                 <img
                   src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_TikTok.png"
-                  alt="Press-Kit" width="48" />
+                  alt="TikTok icon" width="48" height="48" loading="lazy" />
               </a>
             </li>
             <li>
-              <a href="https://discord.gg/dNRHnA3s2J" target="_blank">
+              <a href="https://discord.gg/dNRHnA3s2J" target="_blank" rel="noopener noreferrer"
+                aria-label="Sometimes Limited Discord">
                 <img
                   src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Discord.png"
-                  alt="Press-Kit" width="48" />
+                  alt="Discord icon" width="48" height="48" loading="lazy" />
               </a>
             </li>
             <li>
-              <a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">
+              <a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank" rel="noopener noreferrer"
+                aria-label="Sometimes Limited on BlueSky">
                 <img
                   src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_BlueSky.png"
-                  alt="Press-Kit" width="48" />
+                  alt="BlueSky icon" width="48" height="48" loading="lazy" />
               </a>
             </li>
             <li>
-              <a href="https://sometimes.ltd/bento/presskit.html" target="_blank">
+              <a href="https://sometimes.ltd/bento/presskit.html" target="_blank" rel="noopener noreferrer"
+                aria-label="Bento Blocks press kit">
                 <img
                   src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Icon_Press.png"
-                  alt="Press-Kit" width="48" />
+                  alt="Press kit icon" width="48" height="48" loading="lazy" />
               </a>
             </li>
           </ul>
@@ -597,23 +611,19 @@
       </div>
     </div>
   </section>
+
   <section>
     <div class="center gradient-top padding-bottom-large">
-      <!-- 646/190 -->
       <div class="padding-top">
-        <iframe src="https://store.steampowered.com/widget/3311670/" frameborder="0" width="470" height="190"></iframe>
-      </div>
-      <!-- Fish -->
-      <div class="fish">
+        <iframe src="https://store.steampowered.com/widget/3311670/" frameborder="0" width="470" height="190"
+          title="Bento Blocks Steam widget" loading="lazy"></iframe>
       </div>
 
-      <div class="">
-      </div>
+      <div class="fish"></div>
 
-      <!-- First Feature -->
       <div class="row center padding-top">
         <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-          class="bordered tilt-1">
+          class="bordered tilt-1" loading="lazy">
           <source
             src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Gameplay_4.mp4"
             type="video/mp4" />
@@ -626,24 +636,22 @@
         </div>
       </div>
 
-      <!-- Second Feature -->
       <div class="row center padding-top reverse">
         <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-          class="bordered tilt-2">
+          class="bordered tilt-2" loading="lazy">
           <source
             src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Gameplay_1.mp4"
             type="video/mp4" />
         </video>
         <div class="responsive-paragraph right-spacing">
-          <h2>Complete The Recipe Book!</h2>
+          <h2>Complete The Recipe Book</h2>
           <p>Solve each puzzle with the <b>fewest cuts</b> to complete your recipe book.</p>
         </div>
       </div>
 
-      <!-- Third Feature -->
       <div class="row center padding-top">
         <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-          class="bordered tilt-1">
+          class="bordered tilt-1" loading="lazy">
           <source
             src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Gameplay_3.mp4"
             type="video/mp4" />
@@ -654,15 +662,14 @@
         </div>
       </div>
 
-      <!-- Fourth Feature -->
       <div class="row center padding-top reverse padding-bottom">
         <video autoplay loop muted playsinline webkit-playsinline disablePictureInPicture style="pointer-events: none;"
-          class="bordered tilt-2 ">
+          class="bordered tilt-2" loading="lazy">
           <source
             src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Gameplay_2.mp4"
             type="video/mp4" />
         </video>
-        <div class="responsive-paragraph right-spacing ">
+        <div class="responsive-paragraph right-spacing">
           <h2>Hand-Crafted Levels</h2>
           <p>Explore <b>over 100 lovingly hand-crafted levels</b>, each with its own unique twist and satisfying
             solution.
@@ -670,66 +677,71 @@
         </div>
       </div>
     </div>
-    <!-- MEET THE TEAM -->
   </section>
+
   <section
-    style="background-color: #ca9d5d; background-image: url(https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/corkboard.png); background-repeat: repeat; ">
+    style="background-color: #ca9d5d; background-image: url(https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/corkboard.png); background-repeat: repeat;">
     <div class="center gradient-top">
       <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/tape.png"
-        alt="Transition tape" class="divider" width="300" height="56">
+        alt="Tape transition" class="divider" width="300" height="56" loading="lazy">
     </div>
+
     <div class="meet-the-team">
       <div class="center responsive-paragraph padding-bottom">
-        <h2>SOMETIMES LIMITED</h2>
+        <h2>Sometimes Limited</h2>
         <p>
           SOMETIMES LIMITED is an independent game development studio based in New Zealand.
         </p>
       </div>
       <div class="layout3 center solo_paragraph padding-bottom">
-        <div class="center item padding-bottom ">
-          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Jet.png" />
-          <p><a href="https://www.linkedin.com/in/jet-jones-50b182179/">Jet Jones</a></p>
+        <div class="center item padding-bottom">
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Jet.png"
+            alt="Portrait of Jet Jones" loading="lazy" />
+          <p><a href="https://www.linkedin.com/in/jet-jones-50b182179/" rel="noopener noreferrer" target="_blank">Jet
+              Jones</a></p>
         </div>
         <div class="center item padding-bottom">
-          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Sofia.png" />
-          <p><a href="https://nz.linkedin.com/in/sofia-kotelevskaya-80804b1a2">Sofia Kotelevskaya</a></p>
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Sofia.png"
+            alt="Portrait of Sofia Kotelevskaya" loading="lazy" />
+          <p><a href="https://nz.linkedin.com/in/sofia-kotelevskaya-80804b1a2" rel="noopener noreferrer"
+              target="_blank">Sofia Kotelevskaya</a></p>
         </div>
         <div class="center item padding-bottom">
-          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Andy.png" />
-          <p><a href="https://damnstandard.com/">Andy Burusphat</a></p>
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Andy.png"
+            alt="Portrait of Andy Burusphat" loading="lazy" />
+          <p><a href="https://damnstandard.com/" rel="noopener noreferrer" target="_blank">Andy Burusphat</a></p>
         </div>
       </div>
     </div>
   </section>
 
   <section>
-
     <footer
       style="background-color: #3a4231; background-image: url(https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/green_background.png); background-repeat: repeat;">
       <div class="center gradient-top padding-bottom">
-
         <div class="center">
           <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/tape.png"
-            alt="Transition tape" class="divider2" width="300" height="56">
+            alt="Tape transition" class="divider2" width="300" height="56" loading="lazy">
         </div>
         <h2 class="accent">Join our Discord community...</h2>
 
         <div class="padding-bottom-medium">
           <iframe src="https://discord.com/widget?id=1406824467891749025&theme=dark" width="350" height="300"
             allowtransparency="true" frameborder="0"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            title="Sometimes Limited Discord server" loading="lazy"></iframe>
         </div>
+
         <h2 class="accent">...and subscribe to our newsletter!</h2>
         <form action="https://buttondown.com/api/emails/embed-subscribe/sometimesltd" method="post"
           class="form padding-bottom">
           <div class="field-group">
             <input placeholder="Enter your email" type="email" class="email-input" name="email" required
-              autocomplete="email">
-            <input type="hidden" name="embed" value="1">
+              autocomplete="email" aria-label="Email address" />
+            <input type="hidden" name="embed" value="1" />
             <button class="button-30" type="submit">Subscribe</button>
           </div>
         </form>
-        </br></br>
 
         <ul class="footer-links">
           <li>
@@ -737,30 +749,33 @@
                 rel="noopener noreferrer">Steam</a></p>
           </li>
           <li>
-            <p><a href="https://www.instagram.com/sometimesltd/" target="_blank">Instagram</a></p>
+            <p><a href="https://www.instagram.com/sometimesltd/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </p>
           </li>
           <li>
-            <p><a href="https://x.com/SometimesLtd" target="_blank">X</a></p>
+            <p><a href="https://x.com/SometimesLtd" target="_blank" rel="noopener noreferrer">X</a></p>
           </li>
           <li>
-            <p><a href="https://www.tiktok.com/@sometimesltd" target="_blank">TikTok</a></p>
+            <p><a href="https://www.tiktok.com/@sometimesltd" target="_blank" rel="noopener noreferrer">TikTok</a></p>
           </li>
           <li>
-            <p><a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">BlueSky</a></p>
+            <p><a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank"
+                rel="noopener noreferrer">BlueSky</a></p>
           </li>
           <li>
-            <p><a href="https://discord.gg/dNRHnA3s2J" target="_blank">Discord</a></p>
+            <p><a href="https://discord.gg/dNRHnA3s2J" target="_blank" rel="noopener noreferrer">Discord</a></p>
           </li>
           <li>
-            <p><a href="mailto:sometimeslimited.games@gmail.com" target="_blank">Contact</a></p>
+            <p><a href="mailto:sometimeslimited.games@gmail.com" target="_blank" rel="noopener noreferrer">Contact</a>
+            </p>
           </li>
           <li>
-            <p><a href="https://sometimes.ltd/bento/presskit.html" target="_blank">Press Kit</a></p>
+            <p><a href="https://sometimes.ltd/bento/presskit.html" target="_blank" rel="noopener noreferrer">Press
+                Kit</a></p>
           </li>
         </ul>
-        <p><a href="https://sometimes.ltd/" target="_blank">© SOMETIMES LIMITED.</a></p>
 
-
+        <p><a href="https://sometimes.ltd/" target="_blank" rel="noopener noreferrer">© SOMETIMES LIMITED.</a></p>
       </div>
     </footer>
   </section>
