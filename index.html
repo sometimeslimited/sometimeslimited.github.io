@@ -304,9 +304,9 @@
 
     .item {
       flex: 1;
-      padding: 20px;
+      /* padding: 20px; */
       text-align: center;
-      margin: 5px;
+      /* margin: 5px; */
     }
 
     .item img {
@@ -522,6 +522,24 @@
     .tilt-2 {
       transform: rotate(1deg);
     }
+
+    .steam-widget {
+      width: 100%;
+      max-width: 470px;
+      padding-left: 1ch;
+      padding-right: 1ch;
+      /* Optional: keep it from getting too wide on desktop */
+    }
+
+    .steam-widget iframe {
+      width: 100%;
+      height: auto;
+      min-height: 190px;
+  
+      aspect-ratio: 470 / 190;
+      /* preserves correct shape */
+      border: 0;
+    }
   </style>
 </head>
 
@@ -614,9 +632,9 @@
 
   <section>
     <div class="center gradient-top padding-bottom-large">
-      <div class="padding-top">
-        <iframe src="https://store.steampowered.com/widget/3311670/" frameborder="0" width="470" height="190"
-          title="Bento Blocks Steam widget" loading="lazy"></iframe>
+      <div class="padding-top steam-widget center">
+        <iframe src="https://store.steampowered.com/widget/3311670/" frameborder="0" title="Bento Blocks Steam widget"
+          loading="lazy"></iframe>
       </div>
 
       <div class="fish"></div>
