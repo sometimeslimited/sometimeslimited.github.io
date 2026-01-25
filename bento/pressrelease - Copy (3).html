@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bento Blocks – Press Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg-color: #000000;
+      --section-bg: #1a1a1a;
+      --text-main: #ffffff;
+      --text-muted: #cccccc;
+      --accent-red: #ff3b3b;
+      --border-weight: 2px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Arial Black", "Gadget", sans-serif;
+      background: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.4;
+    }
+
+    header { width: 100%; background: #111; text-align: center; }
+    .hero-image img { width: 100%; max-width: 1200px; display: block; margin: 0 auto; }
+
+    main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+
+    /* The Terra Nil Grid System */
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    section {
+      border: var(--border-weight) solid #ffffff;
+      padding: 1.5rem;
+      height: 100%;
+    }
+
+    h2 { font-size: 1.8rem; text-transform: uppercase; margin: 0 0 1rem; letter-spacing: -1px; }
+    h3 { font-size: 1.1rem; text-transform: uppercase; margin: 1.5rem 0 0.5rem; color: var(--text-muted); }
+
+    p, li, .fact-value { font-family: sans-serif; font-size: 0.95rem; font-weight: normal; }
+
+    .fact-label { text-transform: uppercase; font-weight: bold; font-size: 0.8rem; margin-top: 1rem; }
+    .highlight-text { color: var(--accent-red); font-weight: bold; }
+
+    /* Visual Media Styling */
+    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1rem; }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+    .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .gallery img { width: 100%; border: 1px solid #444; display: block; }
+    .gallery.branding img { grid-column: span 1; }
+
+    .full-width { grid-column: span 3; }
+
+    ul { padding-left: 1.2rem; margin: 0.5rem 0; }
+    a { color: inherit; text-decoration: underline; }
+
+    @media (max-width: 900px) {
+      .press-grid { grid-template-columns: 1fr; }
+      .full-width { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero-image">
+    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3311670/header.jpg" alt="Bento Blocks">
+  </div>
+</header>
+
+<main>
+  <div class="press-grid">
+    <section>
+      <h2>Description</h2>
+      <p>Bento Blocks is a cozy, puzzly cooking game about making bento lunch boxes. Slice ingredients, rearrange them, and fit them into each box using the fewest cuts possible. Slow down, experiment, and enjoy a gentle soundtrack and soft, hand-painted art.</p>
+    </section>
+
+    <section>
+      <h2>Fact Sheet</h2>
+      <div class="fact-label">Developer</div>
+      <div class="fact-value">SOMETIMES LIMITED</div>
+      <div class="fact-label">Publisher</div>
+      <div class="fact-value highlight-text">SOMETIMES LIMITED</div>
+      <div class="fact-label">Release Date</div>
+      <div class="fact-value">29 January 2026</div>
+      <div class="fact-label">Platforms</div>
+      <div class="fact-value">PC (Steam)</div>
+      <div class="fact-label">Price</div>
+      <div class="fact-value">$14.99 USD / €10.00 EUR / JP¥1800</div>
+    </section>
+
+    <section>
+      <h2>Team</h2>
+      <div class="fact-label">SOMETIMES LIMITED</div>
+      <p>Jet Jones<br>Sofia Kotelevskaya<br>Fuengrak (Andy) Burusphat</p>
+      <div class="fact-label">Awards</div>
+      <p>Winner – The Pavs Student Slice 2025<br>Shortlisted – SXSW Best Student Game 2025</p>
+    </section>
+  </div>
+
+  <div class="press-grid">
+    <section class="full-width">
+      <h2>Trailer & Screenshots</h2>
+      <div class="press-grid" style="border:none; padding:0; grid-template-columns: 1.5fr 1fr;">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/YaxfxPclSkk" allowfullscreen></iframe>
+        </div>
+        <div class="gallery">
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_1.jpg">
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_2.jpg">
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_3.jpg">
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_4.jpg">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="press-grid">
+    <section>
+      <h2>Branding</h2>
+      <h3>Logos</h3>
+      <div class="gallery branding">
+        <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo.png">
+        <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo_Alt.png">
+      </div>
+      <h3>Key Art</h3>
+      <img src="https://clan.akamai.steamstatic.com/images/45312383/38881c8ef9ee656f0c35770ae71a54a2eca13e97.png" style="width:100%; margin-top:10px;">
+    </section>
+
+    <section class="full-width" style="grid-column: span 2;">
+      <h2>Press Release</h2>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">23 January 2025</p>
+      <p><strong>Bento Blocks Launches on January 29th, 2026 — Get Ready to Slice, Arrange, and Perfect Your Lunch Box.</strong></p>
+      <p>Auckland, New Zealand – 10 December 2025 – SOMETIMES LIMITED is thrilled to announce that Bento Blocks, the cozy cooking puzzle game, will officially launch worldwide on 29 January 2026 (10AM PST).</p>
+      <p>What began as a two-week game jam project made by a team of three has gathered more attention than the team ever imagined, with over 40,000 wishlists and 40 million+ views across short-form media in a year.</p>
+      <h3>Key Information</h3>
+      <ul>
+        <li>Over 180+ quirky levels.</li>
+        <li>No pressure, no timer – play at your own pace.</li>
+        <li>Relaxing soundtrack and hand-painted art.</li>
+      </ul>
+      <p style="margin-top:2rem;"><strong>Contact:</strong> <a href="mailto:sometimeslimited.games@gmail.com">sometimeslimited.games@gmail.com</a></p>
+    </section>
+  </div>
+</main>
+
+</body>
+</html>

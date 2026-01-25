@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bento Blocks – Press Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg-color: #0c0c0c;
+      --text-main: #ffffff;
+      --text-muted: #a0a0a0;
+      --accent-pink: #ff2d55;
+      --border-color: #ffffff;
+      --border-weight: 3px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 2vw;
+      font-family: "Arial Black", sans-serif;
+      background: var(--bg-color);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* FLUID HEADER */
+    header {
+      margin-bottom: 4rem;
+    }
+
+    .brand-title {
+      color: var(--accent-pink);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(4rem, 12vw, 10rem);
+      line-height: 0.85;
+      margin: 0px;
+      margin-left: -0.1ch;
+      padding-left: 0px;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+    }
+
+    /* GRID SYSTEM */
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5vw;
+      width: 100%;
+    }
+
+    .grid-item {
+      border: var(--border-weight) solid var(--border-color);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .full-width {
+      grid-column: span 3;
+    }
+
+    .span-2 {
+      grid-column: span 2;
+    }
+
+    /* TYPOGRAPHY */
+    .section-num {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      line-height: 1;
+    }
+
+    p,
+    li {
+      font-family: sans-serif;
+      font-weight: normal;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* GALLERY STYLING */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 1rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border: 1px solid #444;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.02);
+      border-color: #fff;
+    }
+
+    /* LIGHTBOX (TERRA NIL STYLE) */
+    #lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #lightbox-img {
+      max-width: 85%;
+      max-height: 85%;
+      border: 4px solid #fff;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .lb-btn {
+      position: absolute;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 4rem;
+      cursor: pointer;
+      padding: 20px;
+      font-family: serif;
+    }
+
+    .lb-close {
+      top: 20px;
+      right: 20px;
+      font-size: 3rem;
+    }
+
+    .lb-prev {
+      left: 20px;
+    }
+
+    .lb-next {
+      right: 20px;
+    }
+
+    /* MAILING LIST */
+    .mailing-list-box {
+      margin-top: 2rem;
+      background: #fff;
+      color: #000;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .mailing-list-box h2 {
+      color: #000;
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 5rem);
+    }
+
+    .input-group {
+      display: flex;
+      flex-grow: 1;
+      max-width: 600px;
+      margin-left: 2rem;
+      border: 4px solid #000;
+    }
+
+    input[type="email"] {
+      flex-grow: 1;
+      border: none;
+      padding: 1rem;
+      font-size: 1.2rem;
+      outline: none;
+    }
+
+    button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 0 2.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 1024px) {
+      .press-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .full-width,
+      .span-2 {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <p class="brand-title">Bento Blocks</p>
+      <h1>Press Kit</h1>
+    </header>
+
+    <div class="press-grid">
+      <div class="grid-item">
+        <!-- <span class="section-num">1.</span> -->
+        <h2>Description</h2>
+        <p>Bento Blocks is a cozy, puzzly cooking game about making bento lunch boxes. Slice ingredients and fit them
+          using the fewest cuts possible.</p>
+      </div>
+
+      <div class="grid-item">
+        <!-- <span class="section-num">2.</span> -->
+        <h2>Fact Sheet</h2>
+        <p><strong>Developer:</strong> SOMETIMES LIMITED<br><strong>Release:</strong> 29 Jan
+          2026<br><strong>Price:</strong> $14.99 USD</p>
+      </div>
+
+      <div class="grid-item">
+        <!-- <span class="section-num">3.</span> -->
+        <h2>Team</h2>
+        <p>Jet Jones, Sofia Kotelevskaya, Andy Burusphat.</p>
+      </div>
+
+      <div class="grid-item span-2">
+        <!-- <span class="section-num">4.</span> -->
+        <h2>Media</h2>
+        <div class="gallery-grid" id="main-gallery">
+          <img
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_1.jpg"
+            class="lb-trigger">
+          <img
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_2.jpg"
+            class="lb-trigger">
+          <img
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_3.jpg"
+            class="lb-trigger">
+          <img
+            src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_4.jpg"
+            class="lb-trigger">
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <!-- <span class="section-num">5.</span> -->
+        <h2>Branding</h2>
+        <div class="gallery-grid" style="grid-template-columns: 1fr;">
+          <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo.png"
+            class="lb-trigger">
+          <img src="https://clan.akamai.steamstatic.com/images/45312383/38881c8ef9ee656f0c35770ae71a54a2eca13e97.png"
+            class="lb-trigger">
+        </div>
+      </div>
+    </div>
+
+    <div class="mailing-list-box">
+      <h2>JOIN OUR MAILING LIST</h2>
+      <div class="input-group">
+        <input type="email" placeholder="ENTER YOUR EMAIL">
+        <button>SIGN UP</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="lightbox">
+    <button class="lb-btn lb-close">&times;</button>
+    <button class="lb-btn lb-prev">&#10094;</button>
+    <img id="lightbox-img" src="">
+    <button class="lb-btn lb-next">&#10095;</button>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const triggers = document.querySelectorAll('.lb-trigger');
+    let currentIndex = 0;
+
+    const showImage = (index) => {
+      currentIndex = index;
+      lbImg.src = triggers[currentIndex].src;
+      lightbox.style.display = 'flex';
+    };
+
+    triggers.forEach((img, i) => {
+      img.addEventListener('click', () => showImage(i));
+    });
+
+    document.querySelector('.lb-close').onclick = () => lightbox.style.display = 'none';
+    document.querySelector('.lb-next').onclick = () => showImage((currentIndex + 1) % triggers.length);
+    document.querySelector('.lb-prev').onclick = () => showImage((currentIndex - 1 + triggers.length) % triggers.length);
+
+    // Close on background click
+    lightbox.onclick = (e) => { if (e.target === lightbox) lightbox.style.display = 'none'; };
+  </script>
+
+</body>
+
+</html>

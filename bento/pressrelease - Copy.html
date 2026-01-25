@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bento Blocks — Press Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --border-colour: #e3e3e3;
+      --text-main: #222;
+      --text-muted: #666;
+      --pill-bg: #fafafa;
+      --link: #2b5daa;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-margin-top: 5rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .presskit {
+      max-width: 1480px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+      line-height: 1.6;
+    }
+
+    .press-hero h1 {
+      font-size: 2.4rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .press-tagline {
+      font-size: 1.05rem;
+      max-width: 40rem;
+      margin: 0 0 1.5rem;
+    }
+
+    .press-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      border-bottom: 1px solid var(--border-colour);
+      padding-bottom: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .press-nav a {
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-colour);
+      background: var(--pill-bg);
+      font-size: 0.9rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .press-nav a:hover {
+      background: #f0f0f0;
+    }
+
+    .press-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.2fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .press-section+.press-section {
+      margin-top: 2rem;
+    }
+
+    .press-section h2 {
+      font-size: 1.4rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .press-section h3 {
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.4rem;
+    }
+
+    .press-section p {
+      margin: 0.4rem 0;
+    }
+
+    .press-section ul {
+      padding-left: 1.2rem;
+      margin: 0.4rem 0;
+    }
+
+    .press-section li+li {
+      margin-top: 0.25rem;
+    }
+
+    .press-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0.2rem 0 0.5rem;
+    }
+
+    .press-sidebar {
+      border-left: 1px solid var(--border-colour);
+      padding-left: 1.5rem;
+    }
+
+    .press-facts {
+      margin: 0.5rem 0 0;
+    }
+
+    .press-facts div {
+      margin-bottom: 0.6rem;
+    }
+
+    .press-facts dt {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .press-facts dd {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    /* Larger gallery items */
+    .press-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .press-gallery.small img {
+      max-height: 140px;
+      object-fit: contain;
+    }
+
+    .press-gallery a {
+      display: block;
+      /* cursor: zoom-in; */
+      overflow: hidden; /* so zoom stays within rounded corners */
+      border-radius: 0.5rem;
+    }
+
+    .press-gallery img {
+      width: 100%;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border-colour);
+      display: block;
+      transition: transform 0.18s ease-out;
+    }
+
+    .press-gallery a:hover img {
+      transform: scale(1.1);
+    }
+
+    .press-footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* LIGHTBOX */
+
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 1.5rem;
+    }
+
+    .lightbox-overlay.is-open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: #fff;
+    }
+
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 80vh;
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-caption {
+      font-size: 0.9rem;
+      text-align: center;
+      opacity: 0.85;
+    }
+
+    .lightbox-meta {
+      font-size: 0.8rem;
+      opacity: 0.75;
+    }
+
+    .lightbox-controls {
+      margin-top: 0.25rem;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .lightbox-controls button {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 999px;
+      padding: 0.25rem 0.8rem;
+      color: #fff;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .lightbox-controls button:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    @media (max-width: 800px) {
+      .press-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .press-sidebar {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid var(--border-colour);
+        padding-top: 2rem;
+        margin-top: 1.5rem;
+      }
+
+      .presskit {
+        padding: 2rem 1.25rem 3rem;
+      }
+
+      .press-hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="presskit">
+    <section class="press-hero">
+      <h1>BENTO BLOCKS — Press Kit</h1>
+      <p class="press-tagline">
+      </p>
+
+      <nav class="press-nav">
+        <a href="#factsheet">Factsheet</a>
+        <a href="#media">Media</a>
+        <a href="#press-release">Press Release</a>
+        <a href="#about-game">About Game</a>
+        <a href="#about-dev">About Dev</a>
+        <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">Steam</a>
+        <a href="https://www.youtube.com/watch?v=YaxfxPclSkk" target="_blank">Trailer</a>
+      </nav>
+    </section>
+
+    <section class="press-grid">
+      <div class="press-main">
+        <section id="about-game" class="press-section">
+          <h2>About Bento Blocks</h2>
+          <video width="100%" controls="">
+            <source
+              src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/bento_trailer_steam_2.mp4"
+              type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>
+            <a href="https://www.youtube.com/watch?v=YaxfxPclSkk" target="_blank">
+              (YouTube)
+            </a>
+            <a
+              href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/bento_trailer_steam_2.mp4">
+              (Download MP4)
+            </a>
+          </p>
+        </section>
+
+        <section id="features" class="press-section">
+          <p>
+            A cozy puzzle game where you slice and arrange ingredients into bento lunch boxes under a limited cut count.
+          </p>
+          <h3>Features</h3>
+          <ul>
+            <li>Discover a fresh take on puzzle games as you slice and arrange ingredients to craft bento boxes.</li>
+            <li>Explore new puzzle mechanics and techniques to complete your recipe book.</li>
+            <li>Over 180 hand-crafted levels, each with its own twist and satisfying solution.</li>
+            <li>Relaxing music and calming, appetising visuals.</li>
+            <li>Play at your own pace with no time pressure or timers.</li>
+          </ul>
+        </section>
+
+        <section id="media" class="press-section">
+          <h2>Media</h2>
+
+          <h3>Screenshots</h3>
+          <p class="press-note">Click any image to view at full resolution.</p>
+          <div class="press-gallery">
+            <a
+              href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_1.jpg"
+              data-group="screenshots">
+              <img
+                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_1.jpg"
+                alt="Bento Blocks screenshot 1">
+            </a>
+            <a
+              href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_2.jpg"
+              data-group="screenshots">
+              <img
+                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_2.jpg"
+                alt="Bento Blocks screenshot 2">
+            </a>
+            <a
+              href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_3.jpg"
+              data-group="screenshots">
+              <img
+                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_3.jpg"
+                alt="Bento Blocks screenshot 3">
+            </a>
+            <a
+              href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_4.jpg"
+              data-group="screenshots">
+              <img
+                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_4.jpg"
+                alt="Bento Blocks screenshot 4">
+            </a>
+            <a
+              href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_5.jpg"
+              data-group="screenshots">
+              <img
+                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_5.jpg"
+                alt="Bento Blocks screenshot 5">
+            </a>
+          </div>
+
+          <h3>Logos</h3>
+          <div class="press-gallery small">
+            <a href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo.png"
+              data-group="logos">
+              <img
+                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo.png"
+                alt="Bento Blocks logo">
+            </a>
+            <a
+              href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo_Alt.png"
+              data-group="logos">
+              <img
+                src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo_Alt.png"
+                alt="Bento Blocks logo transparent">
+            </a>
+          </div>
+
+          <h3>Key Art &amp; Capsules</h3>
+          <div class="press-gallery">
+            <a href="https://clan.akamai.steamstatic.com/images/45312383/38881c8ef9ee656f0c35770ae71a54a2eca13e97.png"
+              data-group="keyart">
+              <img
+                src="https://clan.akamai.steamstatic.com/images/45312383/38881c8ef9ee656f0c35770ae71a54a2eca13e97.png"
+                alt="Bento Blocks promotional scene - cutting board layout">
+            </a>
+            <a href="https://clan.akamai.steamstatic.com/images/45312383/35c3926371aafe7e46788206821472169da4b78b.png"
+              data-group="keyart">
+              <img
+                src="https://clan.akamai.steamstatic.com/images/45312383/35c3926371aafe7e46788206821472169da4b78b.png"
+                alt="Bento Blocks promotional scene - rice cutting puzzle">
+            </a>
+            <a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3311670/header.jpg"
+              data-group="keyart">
+              <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3311670/header.jpg"
+                alt="Bento Blocks Steam header capsule">
+            </a>
+          </div>
+        </section>
+
+        <section id="press-release" class="press-section">
+          <h2>Press Release</h2>
+          <p class="press-note">23 January 2025</p>
+
+          <h3>Bento Blocks Launches on January 29th, 2026 — Get Ready to Slice, Arrange, and Perfect Your Lunch Box.
+          </h3>
+
+          <p>
+            SOMETIMES LIMITED invites players to unwind and sharpen their culinary creativity in this delightful and
+            cozy puzzle game, coming to PC on Steam.
+          </p>
+
+          <p>
+            <a href="https://www.youtube.com/watch?v=YaxfxPclSkk" target="_blank">Release Date Trailer</a>
+          </p>
+
+          <p>
+            Auckland, New Zealand - December 10th, 2025 - SOMETIMES LIMITED is thrilled to announce that Bento Blocks,
+            the cozy cooking puzzle game will officially launch worldwide on January 29th, 2026 (10AM PACIFIC STANDARD
+            TIME).
+          </p>
+
+          <p>
+            Bento Blocks invites players to think outside the lunch-box, slice, arrange and fit ingredients to a given
+            design using the fewest cuts possible. Slow down and enjoy the gentle soundtrack and hand-painted art style.
+          </p>
+
+          <p>
+            What began as a 2 weeks game-jam project made by a team of 3, has gathered more audience than we imagined,
+            with over 40,000 wish-lists, and 40 million+ views across short-form media in a year's time.
+          </p>
+
+          <h3>Key Information</h3>
+          <ul>
+            <li>A cozy puzzly cooking game about making lunch boxes.</li>
+            <li>No pressure, no timer, play the game at your own pace.</li>
+            <li>Over 180+ quirky levels.</li>
+            <li>Relaxing soundtrack and ambiance, hand-painted art, and hand-crafted levels.</li>
+            <li>Discover new wacky lunch box designs and backgrounds as you complete the recipe book.</li>
+            <li>Release Date: 29th January 2026 (10AM PST).</li>
+            <li>Available on PC via <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/"
+                target="_blank">Steam</a>.</li>
+            <li>Game Length: 4–7 hours.</li>
+            <li>Price point: $14.99 USD / €10.00 EUR / JP¥1800.</li>
+            <li>Awards:
+              <ul>
+                <li>Winner: The Pavs Student Slice 2025.</li>
+                <li>Shortlisted: SXSW Best Student Game 2025.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <hr>
+
+          <p><strong>Press Kit:</strong> <a href="https://sometimes.ltd/bento/presskit.html"
+              target="_blank">https://sometimes.ltd/bento/presskit.html</a></p>
+          <p><strong>Discord:</strong> <a href="https://discord.gg/dNRHnA3s2J"
+              target="_blank">https://discord.gg/dNRHnA3s2J</a></p>
+          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/sometimesltd/"
+              target="_blank">https://www.instagram.com/sometimesltd/</a></p>
+          <p><strong>TikTok:</strong> <a href="https://www.tiktok.com/@sometimesltd"
+              target="_blank">https://www.tiktok.com/@sometimesltd</a></p>
+          <p><strong>X:</strong> <a href="https://x.com/SometimesLtd" target="_blank">https://x.com/SometimesLtd</a></p>
+          <p><strong>BlueSky:</strong> <a href="https://bsky.app/profile/sometimesltd.bsky.social"
+              target="_blank">https://bsky.app/profile/sometimesltd.bsky.social</a></p>
+
+          <p>
+            Wishlist Bento Blocks and be notified when the game is released –
+            <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">PC via Steam</a>.
+          </p>
+
+          <p>
+            Visit our website for more info and join our mailing list –
+            <a href="https://sometimes.ltd/" target="_blank">https://sometimes.ltd/</a>.
+          </p>
+
+          <p>
+            Download the press kit
+            <a href="https://sometimes.ltd/bento/presskit.html" target="_blank">here</a>.
+          </p>
+
+          <p>
+            Request a review Steam code
+            <a href="mailto:sometimeslimited.games@gmail.com">here</a>.
+          </p>
+
+          <h3>Influencer / PR / Key Requests Contact</h3>
+          <p>
+            Andy or Sofia<br>
+            <a href="mailto:sometimeslimited.games@gmail.com">sometimeslimited.games@gmail.com</a>
+          </p>
+        </section>
+      </div>
+
+      <aside class="press-sidebar">
+        <section id="factsheet" class="press-section">
+          <h2>Factsheet</h2>
+          <dl class="press-facts">
+            <div>
+              <dt>Developer</dt>
+              <dd>SOMETIMES LIMITED</dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>New Zealand</dd>
+            </div>
+            <div>
+              <dt>Game</dt>
+              <dd>Bento Blocks</dd>
+            </div>
+            <div>
+              <dt>Genre</dt>
+              <dd>Cozy / Thinky Puzzle</dd>
+            </div>
+            <div>
+              <dt>Platforms</dt>
+              <dd>PC (Steam)</dd>
+            </div>
+            <div>
+              <dt>Release Date</dt>
+              <dd>29 January 2026 (Steam)</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="about-dev" class="press-section">
+          <h2>About SOMETIMES LIMITED</h2>
+          <p>
+            SOMETIMES LIMITED is an independent game studio based in New Zealand.
+            The team is made up of Jet Jones, Sofia Kotelevskaya, and Fuengrak (Andy) Burusphat.
+          </p>
+
+          <dl class="press-facts">
+            <div>
+              <dt>Website</dt>
+              <dd><a href="https://sometimes.ltd" target="_blank">sometimes.ltd</a></dd>
+            </div>
+            <div>
+              <dt>Contact</dt>
+              <dd><a href="mailto:sometimeslimited.games@gmail.com">sometimeslimited.games@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>Social</dt>
+              <dd>
+                <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">Steam</a> ·
+                <a href="https://discord.gg/dNRHnA3s2J" target="_blank">Discord</a> ·
+                <a href="https://www.instagram.com/sometimesltd/" target="_blank">Instagram</a> ·
+                <a href="https://www.tiktok.com/@sometimesltd" target="_blank">TikTok</a> ·
+                <a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">Bluesky</a> ·
+                <a href="https://x.com/SometimesLtd" target="_blank">X</a>
+              </dd>
+            </div>
+          </dl>
+        </section>
+      </aside>
+    </section>
+
+    <footer class="press-footer">
+      <p>© SOMETIMES LIMITED. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <!-- LIGHTBOX MARKUP + SCRIPT -->
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+    <div class="lightbox-inner">
+      <img class="lightbox-image" src="" alt="">
+      <div class="lightbox-caption"></div>
+      <div class="lightbox-meta"></div>
+      <div class="lightbox-controls">
+        <button type="button" data-lightbox-prev>&larr; Previous</button>
+        <button type="button" data-lightbox-next>Next &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const links = Array.from(document.querySelectorAll('.press-gallery a'));
+      if (!links.length) return;
+
+      const items = links.map(link => {
+        const img = link.querySelector('img');
+        return {
+          href: link.href,
+          alt: img ? img.alt : '',
+          group: link.dataset.group || 'default'
+        };
+      });
+
+      const overlay = document.getElementById('lightbox');
+      const imgEl = overlay.querySelector('.lightbox-image');
+      const captionEl = overlay.querySelector('.lightbox-caption');
+      const metaEl = overlay.querySelector('.lightbox-meta');
+      const closeBtn = overlay.querySelector('.lightbox-close');
+      const prevBtn = overlay.querySelector('[data-lightbox-prev]');
+      const nextBtn = overlay.querySelector('[data-lightbox-next]');
+
+      let currentGroup = null;
+      let groupItems = [];
+      let currentIndex = 0;
+
+      function openLightbox(href, group) {
+        currentGroup = group || 'default';
+        groupItems = items.filter(i => i.group === currentGroup);
+        currentIndex = groupItems.findIndex(i => i.href === href);
+        if (currentIndex < 0) currentIndex = 0;
+        updateLightbox();
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+
+      function updateLightbox() {
+        const item = groupItems[currentIndex];
+        if (!item) return;
+        imgEl.src = item.href;
+        imgEl.alt = item.alt || '';
+        captionEl.textContent = item.alt || '';
+        const groupLabel = item.group.charAt(0).toUpperCase() + item.group.slice(1);
+        metaEl.textContent = groupLabel + ' – ' + (currentIndex + 1) + ' of ' + groupItems.length;
+      }
+
+      function next() {
+        currentIndex = (currentIndex + 1) % groupItems.length;
+        updateLightbox();
+      }
+
+      function prev() {
+        currentIndex = (currentIndex - 1 + groupItems.length) % groupItems.length;
+        updateLightbox();
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          openLightbox(this.href, this.dataset.group);
+        });
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) {
+          closeLightbox();
+        }
+      });
+
+      nextBtn.addEventListener('click', next);
+      prevBtn.addEventListener('click', prev);
+
+      document.addEventListener('keydown', function (e) {
+        if (!overlay.classList.contains('is-open')) return;
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowRight') {
+          next();
+        } else if (e.key === 'ArrowLeft') {
+          prev();
+        }
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

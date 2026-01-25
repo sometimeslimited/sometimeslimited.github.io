@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bento Blocks – Press Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --text-main: #1f1f1f;
+      --text-muted: #666;
+      --link: #2b5daa;
+      --border: #e2e2e2;
+      --bg-soft: #fafafa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 0.25rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin: 2.5rem 0 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.4rem;
+    }
+
+    p {
+      margin: 0.4rem 0;
+    }
+
+    .subheading {
+      font-size: 0.95rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image {
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      display: block;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      margin-top: 0.75rem;
+    }
+
+    .soft-box {
+      background: var(--bg-soft);
+      border-radius: 0.5rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid var(--border);
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+      gap: 0.75rem 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .facts-label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .facts-value {
+      font-size: 0.95rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0.4rem 0;
+    }
+
+    li + li {
+      margin-top: 0.25rem;
+    }
+
+    .small-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    .gallery a {
+      display: block;
+    }
+
+    .gallery img {
+      width: 100%;
+      display: block;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+    }
+
+    iframe {
+      max-width: 100%;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.75rem 0;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 2.5rem 1.25rem 3.5rem;
+      }
+      h1 {
+        font-size: 2.1rem;
+      }
+      .facts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <header>
+    <h1>Bento Blocks</h1>
+    <div class="subheading">Press Kit</div>
+
+    <div class="hero-image">
+      <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3311670/header.jpg"
+           alt="Bento Blocks Steam header art">
+    </div>
+
+    <p class="tagline">
+      A cosy puzzle game where you slice and arrange ingredients into bento lunch boxes under a limited cut count.
+    </p>
+  </header>
+
+  <!-- DESCRIPTION -->
+  <section id="description">
+    <h2>Description</h2>
+    <p>
+      Bento Blocks is a cozy, puzzly cooking game about making bento lunch boxes. Slice ingredients, rearrange them,
+      and fit them into each box using the fewest cuts possible. Slow down, experiment, and enjoy a gentle soundtrack
+      and soft, hand-painted art as you complete a growing recipe book.
+    </p>
+  </section>
+
+  <!-- FACT SHEET -->
+  <section id="factsheet">
+    <h2>Fact Sheet</h2>
+    <div class="soft-box">
+      <div class="facts-grid">
+        <div>
+          <div class="facts-label">Developer</div>
+          <div class="facts-value">SOMETIMES LIMITED</div>
+        </div>
+
+        <div>
+          <div class="facts-label">Based In</div>
+          <div class="facts-value">New Zealand</div>
+        </div>
+
+        <div>
+          <div class="facts-label">Game</div>
+          <div class="facts-value">Bento Blocks</div>
+        </div>
+
+        <div>
+          <div class="facts-label">Genre</div>
+          <div class="facts-value">Cozy / Thinky Puzzle / Cooking</div>
+        </div>
+
+        <div>
+          <div class="facts-label">Platforms</div>
+          <div class="facts-value">PC (Steam)</div>
+        </div>
+
+        <div>
+          <div class="facts-label">Release Date</div>
+          <div class="facts-value">29 January 2026 – 10am PST</div>
+        </div>
+
+        <div>
+          <div class="facts-label">Engine</div>
+          <div class="facts-value">Unity</div>
+        </div>
+
+        <div>
+          <div class="facts-label">Price</div>
+          <div class="facts-value">$14.99 USD / €10.00 EUR / JP¥1800</div>
+        </div>
+
+        <div>
+          <div class="facts-label">Game Length</div>
+          <div class="facts-value">Approx. 4–7 hours</div>
+        </div>
+
+        <div>
+          <div class="facts-label">Awards</div>
+          <div class="facts-value">
+            Winner – The Pavs Student Slice 2025<br>
+            Shortlisted – SXSW Best Student Game 2025
+          </div>
+        </div>
+
+        <div>
+          <div class="facts-label">Steam</div>
+          <div class="facts-value">
+            <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">
+              store.steampowered.com/app/3311670/Bento_Blocks
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="facts-label">Website</div>
+          <div class="facts-value">
+            <a href="https://sometimes.ltd/" target="_blank">https://sometimes.ltd/</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <h2>Team</h2>
+    <p><strong>SOMETIMES LIMITED</strong></p>
+    <p>
+      Jet Jones<br>
+      Sofia Kotelevskaya<br>
+      Fuengrak (Andy) Burusphat
+    </p>
+  </section>
+
+  <!-- LAUNCH TRAILER -->
+  <section id="trailer">
+    <h2>Launch Trailer</h2>
+    <p>
+      <a href="https://www.youtube.com/watch?v=YaxfxPclSkk" target="_blank">
+        Watch the Release Date Trailer on YouTube
+      </a>
+    </p>
+    <p class="small-note">Embedded version:</p>
+    <p>
+      <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/YaxfxPclSkk"
+              title="Bento Blocks – Release Date Trailer"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+    </p>
+    <p>
+      <a href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/bento_trailer_steam_2.mp4">
+        Download Trailer (mp4)
+      </a>
+    </p>
+  </section>
+
+  <!-- SCREENGRABS -->
+  <section id="screenshots">
+    <h2>Screengrabs</h2>
+    <p class="small-note">Click any image to view at full resolution.</p>
+    <div class="gallery">
+      <a href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_1.jpg">
+        <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_1.jpg"
+             alt="Bento Blocks screenshot 1">
+      </a>
+      <a href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_2.jpg">
+        <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_2.jpg"
+             alt="Bento Blocks screenshot 2">
+      </a>
+      <a href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_3.jpg">
+        <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_3.jpg"
+             alt="Bento Blocks screenshot 3">
+      </a>
+      <a href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_4.jpg">
+        <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_4.jpg"
+             alt="Bento Blocks screenshot 4">
+      </a>
+      <a href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_5.jpg">
+        <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Screenshot_5.jpg"
+             alt="Bento Blocks screenshot 5">
+      </a>
+    </div>
+  </section>
+
+  <!-- BRANDING -->
+  <section id="branding">
+    <h2>Branding</h2>
+
+    <h3>Logos</h3>
+    <div class="gallery">
+      <a href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo.png">
+        <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo.png"
+             alt="Bento Blocks logo – board">
+      </a>
+      <a href="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo_Alt.png">
+        <img src="https://s3.ap-southeast-2.amazonaws.com/damnstandard.com/filestorage/BentoBlocks/Bento_Logo_Alt.png"
+             alt="Bento Blocks logo – transparent background">
+      </a>
+    </div>
+
+    <h3>Key Art &amp; Capsules</h3>
+    <div class="gallery">
+      <a href="https://clan.akamai.steamstatic.com/images/45312383/38881c8ef9ee656f0c35770ae71a54a2eca13e97.png">
+        <img src="https://clan.akamai.steamstatic.com/images/45312383/38881c8ef9ee656f0c35770ae71a54a2eca13e97.png"
+             alt="Bento Blocks promotional layout – cutting board">
+      </a>
+      <a href="https://clan.akamai.steamstatic.com/images/45312383/35c3926371aafe7e46788206821472169da4b78b.png">
+        <img src="https://clan.akamai.steamstatic.com/images/45312383/35c3926371aafe7e46788206821472169da4b78b.png"
+             alt="Bento Blocks promotional layout – rice cutting puzzle">
+      </a>
+      <a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3311670/header.jpg">
+        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3311670/header.jpg"
+             alt="Bento Blocks Steam header capsule">
+      </a>
+    </div>
+  </section>
+
+  <!-- PRESS RELEASE -->
+  <section id="press-release">
+    <h2>Press Release</h2>
+    <p class="small-note">Press release date: 23 January 2025</p>
+
+    <h3>Bento Blocks Launches on January 29th, 2026 — Get Ready to Slice, Arrange, and Perfect Your Lunch Box.</h3>
+
+    <p>
+      SOMETIMES LIMITED invites players to unwind and sharpen their culinary creativity in this delightful and cozy
+      puzzle game, coming to PC on Steam.
+    </p>
+
+    <p>
+      <a href="https://www.youtube.com/watch?v=YaxfxPclSkk" target="_blank">Release Date Trailer</a>
+    </p>
+
+    <p>
+      Auckland, New Zealand – 10 December 2025 – SOMETIMES LIMITED is thrilled to announce that Bento Blocks, the cozy
+      cooking puzzle game, will officially launch worldwide on 29 January 2026 (10AM Pacific Standard Time).
+    </p>
+
+    <p>
+      Bento Blocks invites players to think outside the lunch box: slice, arrange, and fit ingredients to a given design
+      using the fewest cuts possible. Slow down and enjoy the gentle soundtrack and hand-painted art style.
+    </p>
+
+    <p>
+      What began as a two-week game jam project made by a team of three has gathered more attention than the team ever
+      imagined, with over 40,000 wishlists and 40 million+ views across short-form media in a year.
+    </p>
+
+    <h3>Key Information</h3>
+    <ul>
+      <li>A cozy, puzzly cooking game about making lunch boxes.</li>
+      <li>No pressure, no timer – play the game at your own pace.</li>
+      <li>Over 180+ quirky levels.</li>
+      <li>Relaxing soundtrack and ambience, hand-painted art, and hand-crafted levels.</li>
+      <li>Discover new wacky lunch box designs and backgrounds as you complete the recipe book.</li>
+      <li>Release Date: 29 January 2026 (10AM PST).</li>
+      <li>Available on PC via <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">Steam</a>.</li>
+      <li>Game length: 4–7 hours.</li>
+      <li>Price point: $14.99 USD / €10.00 EUR / JP¥1800.</li>
+      <li>Awards:
+        <ul>
+          <li>Winner: The Pavs Student Slice 2025.</li>
+          <li>Shortlisted: SXSW Best Student Game 2025.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr>
+
+    <p><strong>Press Kit:</strong> <a href="https://sometimes.ltd/bento/presskit.html" target="_blank">https://sometimes.ltd/bento/presskit.html</a></p>
+    <p><strong>Discord:</strong> <a href="https://discord.gg/dNRHnA3s2J" target="_blank">https://discord.gg/dNRHnA3s2J</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/sometimesltd/" target="_blank">https://www.instagram.com/sometimesltd/</a></p>
+    <p><strong>TikTok:</strong> <a href="https://www.tiktok.com/@sometimesltd" target="_blank">https://www.tiktok.com/@sometimesltd</a></p>
+    <p><strong>X:</strong> <a href="https://x.com/SometimesLtd" target="_blank">https://x.com/SometimesLtd</a></p>
+    <p><strong>BlueSky:</strong> <a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">https://bsky.app/profile/sometimesltd.bsky.social</a></p>
+
+    <p>
+      Wishlist Bento Blocks and be notified when the game is released –
+      <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">PC via Steam</a>.
+    </p>
+
+    <p>
+      Visit our website for more info and join our mailing list –
+      <a href="https://sometimes.ltd/" target="_blank">https://sometimes.ltd/</a>.
+    </p>
+
+    <p>
+      Download the press kit
+      <a href="https://sometimes.ltd/bento/presskit.html" target="_blank">here</a>.
+    </p>
+
+    <p>
+      Request a review Steam code
+      <a href="mailto:sometimeslimited.games@gmail.com">here</a>.
+    </p>
+
+    <h3>Influencer / PR / Key Requests Contact</h3>
+    <p>
+      Andy or Sofia<br>
+      <a href="mailto:sometimeslimited.games@gmail.com">sometimeslimited.games@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- CONTACT / LINKS -->
+  <section id="links">
+    <h2>Links</h2>
+    <ul>
+      <li><strong>Steam:</strong> <a href="https://store.steampowered.com/app/3311670/Bento_Blocks/" target="_blank">Bento Blocks on Steam</a></li>
+      <li><strong>Website:</strong> <a href="https://sometimes.ltd/" target="_blank">https://sometimes.ltd/</a></li>
+      <li><strong>Discord:</strong> <a href="https://discord.gg/dNRHnA3s2J" target="_blank">https://discord.gg/dNRHnA3s2J</a></li>
+      <li><strong>Instagram:</strong> <a href="https://www.instagram.com/sometimesltd/" target="_blank">https://www.instagram.com/sometimesltd/</a></li>
+      <li><strong>TikTok:</strong> <a href="https://www.tiktok.com/@sometimesltd" target="_blank">https://www.tiktok.com/@sometimesltd</a></li>
+      <li><strong>BlueSky:</strong> <a href="https://bsky.app/profile/sometimesltd.bsky.social" target="_blank">https://bsky.app/profile/sometimesltd.bsky.social</a></li>
+      <li><strong>X:</strong> <a href="https://x.com/SometimesLtd" target="_blank">https://x.com/SometimesLtd</a></li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    © SOMETIMES LIMITED. All rights reserved.
+  </div>
+</main>
+
+</body>
+</html>
